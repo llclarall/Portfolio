@@ -18,18 +18,23 @@
 }
 
 @font-face {
-    font-family: "texte";
+    font-family: "notes";
     src: url(polices/Cute\ Notes.ttf);
 }
 
 @font-face {
-    font-family: "body";
+    font-family: "btn";
     src: url(polices/Retrograde.ttf);
 }
 
-section {
-    padding: 5rem 10%;
+
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 html {
     overflow-x: hidden;
@@ -41,12 +46,23 @@ html::-webkit-scrollbar {
     width: .01rem;
 }
 
+section {
+    padding: 4rem 20rem;
+
+}
+
+@media(width<=1200px) {
+    section {
+        padding: 2rem 10%;
+    }
+}
+
 body {
     background-color: var(--beige);
     padding: 0;
     margin: 0;
-    font-family: body;
-/*     background-image: url(dessins/potion.png), 
+/*     font-family: body;
+ *//*     background-image: url(dessins/potion.png), 
                     url(dessins/graphic_design.png),
                     url(dessins/kirby.png), 
                     url(dessins/uxui.png),
@@ -107,7 +123,7 @@ body {
 }*/
  
 .home p {
-    font-family: texte;
+    font-family: notes;
     font-size: 2.5rem;
     z-index: 2;
     color: black;
@@ -119,12 +135,10 @@ body {
 }
 
 .cta {
-    padding: 35px;
     text-decoration: none;
-    color: var(--dark-brown);
     position: fixed;
-    font-size: 1.2rem;
     z-index: 5;
+    margin: 1rem;
 }
 
 nav {
@@ -135,6 +149,7 @@ nav {
 /*     text-transform: uppercase; */
     color: var(--warm-brown);
     font-size: 1.5rem;      /* media queries */
+    font-family: btn;
 }
 
 .qualifs a {
@@ -162,10 +177,260 @@ hr {
 
 /* section about me */
 
-.about_me img {
+/* .about_me {
+    background-image: url(dessins/ampoule.png);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: 10%;
+} */
+
+.about_me .card {
+    display: grid;
+    grid-template-columns: minmax(100px, 35%) 1fr;    grid-template-areas: 
+    "pdp text"
+    "pdp abt_btn";
     width: fit-content;
-    height: 200px;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_me .pdp {
+    width: fit-content;
+    height: 250px;
     border-radius: 5%;
     box-shadow: 0 3px 15px 0 var(--dark-brown);
+    grid-area: pdp;
+}
+
+.about_me .text {
+    grid-area: text;
+    max-width: 450px;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.about_me .logo_skills {
+    width: fit-content;
+    height: 60px;
+}
+
+.about_me .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_me span {
+    font-size: smaller;
+    color: var(--dark-brown);
+}
+
+.about_me .skills_crea {
+    display: flex; 
+    gap: 1rem;
+    margin: 0;
 
 }
+
+.about_me .skills_dev {
+    display: flex; 
+    gap: 1.4rem;
+    margin: 0;
+}
+
+.about_me .skills {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    max-width: 600px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--dark-brown);
+    border: 1px solid var(--dark-brown);
+    font-size: 1.2rem;
+    background-color: var(--beige);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    font-family: btn;
+}
+
+@media (width<=1000px) {
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+.btn:hover:not(.cv,.linkedin,.github) {
+    background-color: var(--dark-brown);
+    color: var(--beige);
+}
+
+.linkedin {
+    background-color: var(--warm-brown);
+    color: var(--beige);
+    padding-right: 2.2rem;
+    text-align: center;
+}
+
+.linkedin:hover {
+    background-color: var(--beige);
+    color: var(--warm-brown);
+}
+
+.github {
+    padding-right: 2rem;
+    text-align: center;
+    background-color: var(--dark-brown);
+    color: var(--beige);
+    font-size: 1.5rem;
+}
+
+.github:hover {
+    background-color: var(--beige);
+    color: var(--warm-brown);
+}
+
+.abt_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: abt_btn;
+}
+
+.abt_btns {
+    display: flex;
+    gap: 20px;
+}
+
+.about_me i:not(.fa-download) {
+    font-size: .8rem;
+    position: absolute;
+    margin-left: 3px;
+}
+
+h2 {
+    font-family: titre;
+    text-transform: uppercase;
+    color: var(--dark-brown);
+    font-size: 4rem;
+    margin: 0;
+}
+
+h3 {
+    font-family: titre;
+    text-transform: uppercase;
+    color: var(--dark-brown);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.about_me h3 {
+    text-align: right;
+    padding: 2rem;
+    margin-left: 20px;
+}
+
+.about_me h2 {
+    text-align: left;
+    padding: 2rem;
+}
+
+.about_me .dessin {
+    margin: 0;
+    position: absolute;
+    left: -10px;
+    width: 40%;
+}
+
+
+
+
+
+/* section projects */
+
+/* .projets .works {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.projets .hh {
+    width: 500px; 
+    height: 350px; 
+    background-image: url('images/hh.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    position: relative;
+} 
+
+.projets .baron {
+    width: 250px; 
+    height: 250px; 
+    background-image: url('images/baron.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    position: relative;
+} */
+
+.projets .works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.projets .hh, .projets .baron, .projets .wp {
+    height: 350px; /* Hauteur identique pour uniformité */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    position: relative;
+}
+
+.projets .hh {
+    background-image: url('images/hh.png');
+}
+
+.projets .baron {
+    background-image: url('images/baron.png');
+}
+
+.projets .wp {
+    background-image: url('images/charlotte.png');
+}
+
+.projets .btn_work {
+    position: absolute;
+    bottom: .7rem;
+    margin: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* setion contact */
+
+.contact h2{
+    text-align: right;
+}
+

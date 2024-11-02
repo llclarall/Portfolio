@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <a class="cta" href="contact.html">Let's work together!</a>
 
-    <!-- page d'accueil -->
+<body class="dosis">
+    <a class="cta btn" href="contact.html" >Let's work together!</a>
+
+<!-- page d'accueil -->
     <section class="home">
         <div class="text">
             <h1 id="moving-title">
@@ -19,25 +24,135 @@
                 <p>Clara Moubarak</p>
         </div>
 
+
+
         <div class="liste">
             <hr>
             <nav class="qualifs">
                     <a href="#about_me">About me</a>
-                    <a href="">Works</a>
+                    <a href="#projets">Works</a>
                     <span class="dev"><img src="dessins/fleur.png" alt="" width="50px"></span>
                     <a href="">Testimonies</a>
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </nav>
                 <hr>
         </div>
     </section>
     
-    <!-- section about me -->
+
+
+<!-- section about me -->
     
 <section class="about_me" id="about_me">
 
-<img src="images/photo identité.png" alt="">
+    
+    <h2>About me</h2>
+    <br>
+    <div class="card">
+        <img class="pdp" src="images/photo identité.png" alt="">
+        <p class="text">Hi! I'm Clara, a web developer student based in Paris. I'm passionate about creating beautiful and functional websites. I'm always looking for new challenges and opportunities to learn and grow. I'm currently looking for an internship as a front-end developer. Feel free to contact me if you'd like to work together!</p>
+        <div class="abt_btns">
+            <div class="abt_btn">
+                <a class="btn cv" href="CV.pdf" download="CV.pdf">My resume <i class="fa-solid fa-download"></i></a>
+                <a class="btn linkedin" href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/" target="_blank">My LinkedIn <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <a href="https://github.com/llclarall/" class="btn github" target="_blank">Github <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+    <br>
+ 
 
+    <img class="dessin" src="dessins/birds2.png" alt="">
+
+    <h3>Skills</h3>
+
+<div class="skills">    
+    <div class="skills_dev">
+        <div class="skill">
+            <img class="logo_skills" src="images/html_css.png" alt="">
+            <span>HTML / CSS</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/js.png" alt="">
+            <span>Javascript</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/php.png" alt="">
+            <span>PHP</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/MySQL.png" alt="">
+            <span>MySQL</span>
+        </div>
+    </div>
+    <div class="skills_crea">
+        <div class="skill">
+            <img class="logo_skills" src="images/photoshop.png" alt="">
+            <span>Photoshop</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/premiere.png" alt="">
+            <span>Premiere Pro</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/figma.png" alt="">
+            <span>Figma</span>
+        </div>
+        <div class="skill">
+            <img class="logo_skills" src="images/wordpress.png" alt="">
+            <span>Wordpress</span>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+
+<!-- section projets -->
+
+<section class="projets" id="projets">
+    <h2>Works</h2>
+    <br><br>
+
+<div class="works">
+
+    <div class="hh">
+        <div class="btn_work">
+            <a href="https://resaweb.moubarak.butmmi.o2switch.site/index.php" class="btn" target="_blank">Hommade Hommous <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="baron">
+        <div class="btn_work">
+            <a href="https://www.youtube.com/watch?v=0ndssbiE-y4" class="btn" target="_blank">Interview L. Baron <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="wp">
+        <div class="btn_work">
+            <a href="https://siteonepage.moubarak.butmmi.o2switch.site/accueil/" class="btn" target="_blank">Site Wordpress <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- section contact -->
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+    <br>
+    <div class="card">
+        <img class="img_contact" src="images/contact.png" alt="">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officia totam aperiam consequuntur, error maxime facilis, quasi magni tempore culpa autem saepe doloribus at, nihil vel tenetur magnam recusandae ipsa.</p>
+
+       
+    </div>
 </section>
 
 
