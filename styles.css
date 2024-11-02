@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #f1e3d2;
+    --warm-brown: #a6610d;
+    --brown: #d9a86c;
+    --light-brown: #d9b68b;
+    --dark-brown: #734022;
+}
+
+@font-face {
+    font-family: "titre";
+    src: url(polices/CHABUL.ttf);
+}
+
+@font-face {
+    font-family: "texte";
+    src: url(polices/Cute\ Notes.ttf);
+}
+
+@font-face {
+    font-family: "body";
+    src: url(polices/Retrograde.ttf);
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: .01rem;
+}
+
+body {
+    background-color: var(--beige);
+    padding: 0;
+    margin: 0;
+    font-family: body;
+/*     background-image: url(dessins/potion.png), 
+                    url(dessins/graphic_design.png),
+                    url(dessins/kirby.png), 
+                    url(dessins/uxui.png),
+                    url(dessins/creative_developer.png);
+    background-repeat: no-repeat;
+    background-position: top right, -100px -200px, 15% 70%, 90% 60%, 55% -170px;
+    background-size: 320px,550px,320px,520px,990px; */
+}
+
+/* page d'accueil */
+
+.home {
+    height: 100vh;
+   /* position: relative; */
+    background-image: url(dessins/potion.png), 
+                    url(dessins/graphic_design.png),
+                    url(dessins/kirby.png), 
+                    url(dessins/uxui.png),
+                    url(dessins/creative_developer.png);
+    background-repeat: no-repeat;
+    background-position: top right, -150px -150px, 20% 95%, 90% 60%, 57% -52%;
+    background-size: 320px,550px,320px,520px,990px;
+}
+
+.home .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Garde le titre centré */
+    z-index: 1;
+    perspective: 1000px; /* Crée une perspective 3D */
+}
+
+.home h1 {
+    font-family: titre;
+    font-size: 10rem;
+    color: var(--warm-brown);
+    text-align: center;
+    margin: 0;
+    border-radius: 8%;
+    box-shadow: 0 5px 20px 0 var(--dark-brown);
+  /*   background-color: var(--beige); */
+/*     text-shadow: 
+        1px 1px 3px rgba(238, 213, 182, 0.908),  
+        1px 1px 5px rgba(204, 136, 34, 0.8),   
+        0px 0px 8px rgba(184, 115, 51, 0.9),  
+        0px 0px 11px rgba(230, 170, 80, 1); */
+    backdrop-filter: blur(10px);
+/*     position: relative; 
+    pointer-events: none;  */
+    transition: transform 0.1s ease; 
+    transform-origin: center; 
+}
+
+/* .home h1:hover {
+    transform: translateY(-300px);
+    transition: transform 0.3s ease-in-out;
+}*/
+ 
+.home p {
+    font-family: texte;
+    font-size: 2.5rem;
+    z-index: 2;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--dark-brown);
+
+/*     backdrop-filter: blur(10px);*/
+}
+
+.cta {
+    padding: 35px;
+    text-decoration: none;
+    color: var(--dark-brown);
+    position: fixed;
+    font-size: 1.2rem;
+    z-index: 5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+/*     text-transform: uppercase; */
+    color: var(--warm-brown);
+    font-size: 1.5rem;      /* media queries */
+}
+
+.qualifs a {
+    text-decoration: none;
+    color: var(--warm-brown);
+}
+
+.dev {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--dark-brown);
+}
+
+hr {
+    margin: 20px;
+    border: 1.2px solid var(--warm-brown);
+}
+
+.liste {
+    position: relative;
+    top: 90%;
+}
+
+
+
+/* section about me */
+
+.about_me img {
+    width: fit-content;
+    height: 200px;
+    border-radius: 5%;
+    box-shadow: 0 3px 15px 0 var(--dark-brown);
+
+}
