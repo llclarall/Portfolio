@@ -32,3 +32,37 @@ document.addEventListener('mousemove', (event) => {
 });
 
 
+/* // Sélectionne la div et la vidéo
+const div = document.getElementById('hh');
+const video = document.getElementById('video-element');
+
+// Écoute l'événement de survol de la souris sur la div
+div.addEventListener('mouseenter', () => {
+    video.play();
+});
+
+// Écoute l'événement de sortie de la souris de la div
+div.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; // Réinitialise la vidéo au début
+}); */
+
+
+
+
+/* Démarrer la vidéo pour projets */
+
+const divsWork = document.querySelectorAll('.work');
+
+divsWork.forEach(div => {
+    const previewVideo = div.querySelector('.preview-video');
+    
+    div.addEventListener('mouseenter', () => {
+        previewVideo.play(); // Démarre la vidéo au survol
+    });
+
+    div.addEventListener('mouseleave', () => {
+        previewVideo.pause(); // Met en pause la vidéo quand la souris quitte
+        previewVideo.currentTime = 0; // Réinitialise la vidéo au début
+    });
+});
