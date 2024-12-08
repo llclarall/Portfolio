@@ -47,21 +47,9 @@ html::-webkit-scrollbar {
 }
 
 section {
-    padding: 4rem 20rem;
-
+    padding: 5rem 15vw;
 }
 
-@media(width<=1300px) {
-    section {
-        padding: 2rem 10%;
-    }
-}
-
-@media(width<=1200px) {
-    section {
-        padding: 2rem 10%;
-    }
-}
 
 body {
     background-color: var(--beige);
@@ -405,18 +393,35 @@ h3 {
 }
 
 .projets .hh {
-    height: 350px;
     background-image: url('images/hh.png');
+    height: 320px;
 }
 
 .projets .baron {
     height: 200px;
+    margin-top: auto;
     background-image: url('images/baron.png');
 }
 
 .projets .wp {
     background-image: url('images/charlotte.png');
     height: 250px;
+    margin-top: auto;
+}
+
+.projets .moviz {
+    background-image: url('images/moviz.png');
+    height: 230px; 
+}
+
+.projets .ent {
+    background-image: url('images/ent.png');
+    height: 180px; 
+}
+
+.projets .cv-video {
+    background-image: url('images/cv-video.jpg');
+    height: 280px; 
 }
 
 .projets .btn_work {
@@ -426,8 +431,8 @@ h3 {
     z-index: 50;
 }
 
-.projets video {
-    height: 350px; /* Hauteur identique pour uniformité */
+.projets .preview-video {
+    height: 100%; /* Hauteur identique pour uniformité */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -435,13 +440,75 @@ h3 {
     position: relative;
 }
 
-
-
-
-
-/* setion contact */
-
-.contact h2{
-    text-align: right;
+.type {
+    position: absolute;
+    margin: 10px;
+    padding: 2px .5rem;
+    border-radius: 50px;
+    background-color: #c99253;
+    z-index: 70;
 }
 
+@media (width<=900px) {
+    .hh {
+        height: 250px;
+    }
+    .preview-video {
+        display: none;    
+    }
+}
+
+
+/* setion opquast */
+
+.opquast {
+    background-color: var(--light-brown);
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+
+/* section témoignages */
+
+.temoignages {
+    padding: 5rem 8vw;
+}
+
+.temoignages h2 {
+    text-align: right;
+    color: var(--dark-brown);
+    padding-right: 10vw;
+}
+
+.temoignages .card_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.temoignages .card {
+    display: flex;
+    gap: 20px;
+    border: var(--dark-brown) 1px solid;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.temoignages .card p {
+    font-size: 1rem;
+    color: var(--dark-brown);
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+.temoignages .card img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    border-radius: 500%;
+
+}
