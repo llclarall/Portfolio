@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Moodboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .moodboard {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .moodboard-item {
+            position: absolute;
+            overflow: hidden;
+            cursor: grab;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .moodboard-item:active {
+            cursor: grabbing;
+        }
+
+        .moodboard-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .moodboard-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hidden-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .reset-button {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .reset-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Initial positions for items, slightly overlapping */
+        .item-1 { top: 20px; left: 30px; width: 150px; height: 150px; }
+        .item-2 { top: 100px; left: 200px; width: 180px; height: 180px; }
+        .item-3 { top: 250px; left: 80px; width: 200px; height: 200px; }
+        .item-4 { top: 50px; left: 400px; width: 170px; height: 170px; }
+        .item-5 { top: 300px; left: 300px; width: 160px; height: 155px; }
+        .item-6 { top: 200px; left: 450px; width: 140px; height: 140px; }
+        .item-7 { top: 120px; left: 500px; width: 180px; height: 180px; }
+        .item-8 { top: 250px; left: 600px; width: 160px; height: 160px; }
+        .item-9 { top: 350px; left: 100px; width: 200px; height: 200px; }
+        .item-10 { top: 400px; left: 450px; width: 170px; height: 170px; }
+        .item-11 { top: 100px; left: 600px; width: 150px; height: 150px; }
+        .item-12 { top: 400px; left: 650px; width: 150px; height: 150px; }
+    </style>
+</head>
+<body>
+
+<div class="moodboard">
+    <button class="reset-button">Reset Positions</button>
+    <div class="moodboard-item item-1">
+        <img src="moodboard/bébé-moi.JPG" alt="Placeholder">
+        <div class="hidden-content">Surprise! Here is a cool anecdote 🎉</div>
+    </div>
+    <div class="moodboard-item item-2">
+        <img src="moodboard/cassettes.jpg" alt="Placeholder">
+        <div class="hidden-content">Here is a GIF or fun fact 😊</div>
+    </div>
+    <div class="moodboard-item item-3">
+        <img src="moodboard/frog.jpg" alt="Placeholder">
+        <div class="hidden-content">Did you know? 🧐</div>
+    </div>
+    <div class="moodboard-item item-4">
+        <img src="moodboard/images.jpg" alt="Placeholder">
+        <div class="hidden-content">An inspiring quote ✨</div>
+    </div>
+    <div class="moodboard-item item-5">
+        <img src="moodboard/joke.jpg" alt="Placeholder">
+        <div class="hidden-content">A secret revealed! 🤫</div>
+    </div>
+    <div class="moodboard-item item-6">
+        <img src="moodboard/lostsouls.jpg" alt="Placeholder">
+        <div class="hidden-content">Keep exploring 🔍</div>
+    </div>
+    <div class="moodboard-item item-7">
+        <img src="moodboard/music.jpg" alt="Placeholder">
+        <div class="hidden-content">Explore new things 💡</div>
+    </div>
+    <div class="moodboard-item item-8">
+        <img src="moodboard/poison.jpg" alt="Placeholder">
+        <div class="hidden-content">Curious? Keep looking 🔎</div>
+    </div>
+    <div class="moodboard-item item-9">
+        <img src="moodboard/programming.jpg" alt="Placeholder">
+        <div class="hidden-content">A fresh perspective 👀</div>
+    </div>
+    <div class="moodboard-item item-10">
+        <img src="moodboard/punk.jpg" alt="Placeholder">
+        <div class="hidden-content">Get inspired 🌟</div>
+    </div>
+    <div class="moodboard-item item-11">
+        <img src="moodboard/sign.jpg" alt="Placeholder">
+        <div class="hidden-content">Let your creativity flow 🎨</div>
+    </div>
+    <div class="moodboard-item item-12">
+        <img src="moodboard/now.jpg" alt="Placeholder">
+        <div class="hidden-content">Let your creativity flow 🎨</div>
+    </div>
+</div>
+
+<script>
+    const items = document.querySelectorAll('.moodboard-item');
+    const resetButton = document.querySelector('.reset-button');
+    const initialPositions = [];
+    let currentZIndex = 10;  // Start with a base z-index
+
+    // Store initial positions of items
+    items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        initialPositions.push({
+            top: rect.top,
+            left: rect.left
+        });
+
+        // Enable dragging with smooth movement
+        let offsetX = 0;
+        let offsetY = 0;
+
+        item.addEventListener('mousedown', (e) => {
+            offsetX = e.clientX - item.getBoundingClientRect().left;
+            offsetY = e.clientY - item.getBoundingClientRect().top;
+
+            // Set the dragged item on top of others initially
+            item.style.zIndex = currentZIndex;
+
+            const moveItem = (eMove) => {
+                const moodboard = document.querySelector('.moodboard');
+                const boardRect = moodboard.getBoundingClientRect();
+
+                let newX = eMove.clientX - offsetX - boardRect.left;
+                let newY = eMove.clientY - offsetY - boardRect.top;
+                
+
+                // Keep items within the moodboard boundary
+                newX = Math.max(0, Math.min(newX, moodboard.offsetWidth - item.offsetWidth));
+                newY = Math.max(0, Math.min(newY, moodboard.offsetHeight - item.offsetHeight));
+
+                item.style.left = `${newX}px`;
+                item.style.top = `${newY}px`;
+            };
+
+            const stopMove = () => {
+                document.removeEventListener('mousemove', moveItem);
+                document.removeEventListener('mouseup', stopMove);
+
+                // Increment z-index after releasing
+                currentZIndex++;  // Ensure the next item dragged is on top of the previous ones
+                item.style.zIndex = currentZIndex;  // Update the item's z-index
+
+            };
+
+            document.addEventListener('mousemove', moveItem);
+            document.addEventListener('mouseup', stopMove);
+        });
+    });
+
+    // Reset button functionality
+    resetButton.addEventListener('click', () => {
+        items.forEach((item, index) => { 
+            const { top, left } = initialPositions[index];
+            item.style.top = `${top - items[0].offsetParent.offsetTop}px`;
+            item.style.left = `${left - items[0].offsetParent.offsetLeft}px`;
+            item.style.zIndex = '';  // Reset z-index to the initial state
+        });
+        currentZIndex = 10;  // Reset z-index counter
+    });
+</script>
+
+</body>
+</html>

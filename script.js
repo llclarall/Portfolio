@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 
 /* MOUVEMENT DU TITRE */
 
@@ -32,22 +33,6 @@ document.addEventListener('mousemove', (event) => {
 });
 
 
-/* // Sélectionne la div et la vidéo
-const div = document.getElementById('hh');
-const video = document.getElementById('video-element');
-
-// Écoute l'événement de survol de la souris sur la div
-div.addEventListener('mouseenter', () => {
-    video.play();
-});
-
-// Écoute l'événement de sortie de la souris de la div
-div.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0; // Réinitialise la vidéo au début
-}); */
-
-
 
 
 /* Démarrer la vidéo pour projets */
@@ -70,3 +55,85 @@ divsWork.forEach(div => {
 });
 
 
+
+
+/* MOUVEMENT DES ÉLÉMENTS DU MOODBOARD */
+
+const items = document.querySelectorAll('.moodboard-item');
+const resetButton = document.querySelector('.reset-button');
+// Vérifiez que les positions initiales sont correctement enregistrées
+const initialPositions = Array.from(items).map(item => {
+    const rect = item.getBoundingClientRect();
+    const parentRect = item.offsetParent.getBoundingClientRect();
+    return { 
+        top: rect.top - parentRect.top, 
+        left: rect.left - parentRect.left 
+    };
+});let currentZIndex = 10;  // Start with a base z-index
+
+// Store initial positions of items
+items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    initialPositions.push({
+        top: rect.top,
+        left: rect.left
+    });
+
+    // Enable dragging with smooth movement
+    let offsetX = 0;
+    let offsetY = 0;
+
+    item.addEventListener('mousedown', (e) => {
+        offsetX = e.clientX - item.getBoundingClientRect().left;
+        offsetY = e.clientY - item.getBoundingClientRect().top;
+
+        // Set the dragged item on top of others initially
+        item.style.zIndex = currentZIndex;
+
+        const moveItem = (eMove) => {
+            const moodboard = document.querySelector('.moodboard');
+            const boardRect = moodboard.getBoundingClientRect();
+
+            let newX = eMove.clientX - offsetX - boardRect.left;
+            let newY = eMove.clientY - offsetY - boardRect.top;
+            
+
+            // Keep items within the moodboard boundary
+            newX = Math.max(0, Math.min(newX, moodboard.offsetWidth - item.offsetWidth));
+            newY = Math.max(0, Math.min(newY, moodboard.offsetHeight - item.offsetHeight));
+
+            item.style.left = `${newX}px`;
+            item.style.top = `${newY}px`;
+        };
+
+        const stopMove = () => {
+            document.removeEventListener('mousemove', moveItem);
+            document.removeEventListener('mouseup', stopMove);
+
+            // Increment z-index after releasing
+            currentZIndex++;  // Ensure the next item dragged is on top of the previous ones
+            item.style.zIndex = currentZIndex;  // Update the item's z-index
+
+        };
+
+        document.addEventListener('mousemove', moveItem);
+        document.addEventListener('mouseup', stopMove);
+    });
+});
+
+
+// Fonction Reset
+resetButton.addEventListener('click', () => {
+    items.forEach((item, index) => { 
+        const { top, left } = initialPositions[index];
+        item.style.top = `${top}px`;  
+        item.style.left = `${left}px`;
+        item.style.zIndex = '';  // Réinitialiser le z-index
+    });
+    currentZIndex = 10;  // Réinitialiser le compteur
+});
+
+
+
+
+});
