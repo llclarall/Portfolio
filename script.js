@@ -61,25 +61,38 @@ divsWork.forEach(div => {
 
 const items = document.querySelectorAll('.moodboard-item');
 const resetButton = document.querySelector('.reset-button');
-// Vérifiez que les positions initiales sont correctement enregistrées
-const initialPositions = Array.from(items).map(item => {
-    const rect = item.getBoundingClientRect();
-    const parentRect = item.offsetParent.getBoundingClientRect();
-    return { 
-        top: rect.top - parentRect.top, 
-        left: rect.left - parentRect.left 
-    };
-});let currentZIndex = 10;  // Start with a base z-index
+const moodboard = document.querySelector('.moodboard');
+let initialRelativePositions = [];
 
-// Store initial positions of items
-items.forEach(item => {
-    const rect = item.getBoundingClientRect();
-    initialPositions.push({
-        top: rect.top,
-        left: rect.left
+// Fonction pour calculer et stocker les positions relatives des items
+function calculateInitialRelativePositions() {
+    const boardRect = moodboard.getBoundingClientRect();
+    initialRelativePositions = Array.from(items).map(item => {
+        const rect = item.getBoundingClientRect();
+        return { 
+            top: (rect.top - boardRect.top) / boardRect.height, 
+            left: (rect.left - boardRect.left) / boardRect.width 
+        };
     });
+}
 
-    // Enable dragging with smooth movement
+// Fonction pour réinitialiser les positions des items en fonction des proportions
+function resetItemsToRelativePositions() {
+    const boardRect = moodboard.getBoundingClientRect();
+    items.forEach((item, index) => {
+        const { top, left } = initialRelativePositions[index];
+        item.style.position = 'absolute';
+        item.style.top = `${top * boardRect.height}px`;
+        item.style.left = `${left * boardRect.width}px`;
+        item.style.zIndex = ''; 
+    });
+}
+
+calculateInitialRelativePositions();
+
+// Ajouter la logique de déplacement des items
+let currentZIndex = 10; // pour gérer les niveaux des items
+items.forEach(item => {
     let offsetX = 0;
     let offsetY = 0;
 
@@ -87,20 +100,17 @@ items.forEach(item => {
         offsetX = e.clientX - item.getBoundingClientRect().left;
         offsetY = e.clientY - item.getBoundingClientRect().top;
 
-        // Set the dragged item on top of others initially
-        item.style.zIndex = currentZIndex;
+        item.style.zIndex = currentZIndex; // Mettre l'item au-dessus des autres
 
         const moveItem = (eMove) => {
-            const moodboard = document.querySelector('.moodboard');
             const boardRect = moodboard.getBoundingClientRect();
 
             let newX = eMove.clientX - offsetX - boardRect.left;
             let newY = eMove.clientY - offsetY - boardRect.top;
-            
 
-            // Keep items within the moodboard boundary
-            newX = Math.max(0, Math.min(newX, moodboard.offsetWidth - item.offsetWidth));
-            newY = Math.max(0, Math.min(newY, moodboard.offsetHeight - item.offsetHeight));
+            // Garder les items dans les limites du moodboard
+            newX = Math.max(0, Math.min(newX, boardRect.width - item.offsetWidth));
+            newY = Math.max(0, Math.min(newY, boardRect.height - item.offsetHeight));
 
             item.style.left = `${newX}px`;
             item.style.top = `${newY}px`;
@@ -110,10 +120,7 @@ items.forEach(item => {
             document.removeEventListener('mousemove', moveItem);
             document.removeEventListener('mouseup', stopMove);
 
-            // Increment z-index after releasing
-            currentZIndex++;  // Ensure the next item dragged is on top of the previous ones
-            item.style.zIndex = currentZIndex;  // Update the item's z-index
-
+            currentZIndex++; 
         };
 
         document.addEventListener('mousemove', moveItem);
@@ -121,16 +128,91 @@ items.forEach(item => {
     });
 });
 
+resetButton.addEventListener('click', resetItemsToRelativePositions);
 
-// Fonction Reset
-resetButton.addEventListener('click', () => {
-    items.forEach((item, index) => { 
-        const { top, left } = initialPositions[index];
-        item.style.top = `${top}px`;  
-        item.style.left = `${left}px`;
-        item.style.zIndex = '';  // Réinitialiser le z-index
-    });
-    currentZIndex = 10;  // Réinitialiser le compteur
+// Recalculer les positions relatives lors d'un redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    resetItemsToRelativePositions();
+});
+
+
+
+
+/* POP UP PROJETS */
+
+const modal = document.getElementById('project-modal');
+const modalTitle = document.querySelector('.modal-title');
+const modalDescription = document.querySelector('.modal-description');
+const modalDetails = document.querySelector('.modal-details');
+const modalLink = document.querySelector('.modal-link');
+const closeBtn = document.querySelector('.close');
+const nextBtn = document.querySelector('.next-project');
+const prevBtn = document.querySelector('.prev-project');
+
+const projects = [
+  {
+    id: 1,
+    title: "Hommade Hommous",
+    description: "Site de réservation pour un restaurant fictif spécialisé dans le houmous.",
+    details: ["Technologies : PHP, MySQL, HTML, CSS", "Objectif : Simplifier la réservation"],
+    link: "https://resaweb.moubarak.butmmi.o2switch.site/index.php",
+    preview: "images/hh_vid2.mp4"
+  },
+  {
+    id: 2,
+    title: "Interview L. Baron",
+    description: "Vidéo d'interview créative réalisée avec une approche documentaire.",
+    details: ["Logiciels : Premiere Pro, After Effects", "Durée : 3 minutes"],
+    link: "https://www.youtube.com/watch?v=0ndssbiE-y4",
+    preview: "images/baron_vid2.mp4"
+  },
+  // Ajoute d'autres projets ici
+];
+
+let currentProjectIndex = 0;
+
+// Ouvrir la modale
+document.querySelectorAll('.open-modal').forEach((icon, index) => {
+  icon.addEventListener('click', (e) => {
+    e.preventDefault();
+    currentProjectIndex = index;
+    showProjectModal(index);
+  });
+});
+
+// Afficher les détails d'un projet dans la modale
+function showProjectModal(index) {
+  const project = projects[index];
+  modalTitle.textContent = project.title;
+  modalDescription.textContent = project.description;
+  modalDetails.innerHTML = project.details.map(detail => `<li>${detail}</li>`).join('');
+  modalLink.href = project.link;
+
+  // Afficher la modale
+  modal.style.display = 'block';
+}
+
+// Fermer la modale
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Fermer en cliquant à l'extérieur
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// Navigation entre projets
+nextBtn.addEventListener('click', () => {
+  currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+  showProjectModal(currentProjectIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+  showProjectModal(currentProjectIndex);
 });
 
 

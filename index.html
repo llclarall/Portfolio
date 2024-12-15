@@ -18,20 +18,12 @@
 
 <nav class="side-nav">
 	<a href="#about_me" class="nav-icon" title="Le cinéma en quelques données">
-		<img src="images/donnees.png" alt="" />
+		<img src="" alt="" />
 	  	<span class="sr-only">Données sur les sorties au cinéma</span>
 	</a>
 	<a href="#projets" class="nav-icon" title="Box-Office par genre">
-		<img src="images/barres.png" alt="Diagramme à barre" />
+		<img src="" alt="Diagramme à barre" />
 	  	<span class="sr-only">Graphique box-office par genre</span>
-	</a>
-	<a href="#graph2" class="nav-icon" title="Evolution des entrées au cinéma en France">
-		<img src="images/courbe.png" alt="Diagramme en courbe" />
-	  	<span class="sr-only">Graphique évolution des entrées au cinéma</span>
-	</a>
-	<a href="#graph3" class="nav-icon" title="Répartition des films par décennies">
-		<img src="images/camembert.png" alt="Diagramme camembert" />
-	  	<span class="sr-only">Graphique films par décennies</span>
 	</a>
 </nav>
 
@@ -85,7 +77,7 @@
                 class="fas fa-external-link-alt"></i></a>
     </div>
 </div>
-<br>
+<br><br>
 
 
 <img class="dessin" src="dessins/birds2.png" alt="">
@@ -184,8 +176,8 @@
             <img src="moodboard/now.jpg" alt="">
             <div class="hidden-content">Let your creativity flow 🎨</div>
         </div>
-        <button class="reset-button">Reset Positions</button>
     </div>
+    <button class="reset-button">Reset Positions</button>
 </div>
 
 </section>
@@ -202,8 +194,9 @@
 <br><br>
 
 <div class="works">
-    <div class="hh work">
+    <div class="hh work" data-id="1">
         <div class="type"><span>dev</span></div>
+        <a href="#" class="open-modal"><i class="fas fa-info-circle"></i></a>
         <div class="btn_work">
             <a href="https://resaweb.moubarak.butmmi.o2switch.site/index.php" class="btn"
                 target="_blank">Hommade Hommous <i class="fas fa-external-link-alt"></i></a>
@@ -211,8 +204,8 @@
         <video src="images/hh_vid2.mp4" class="preview-video" muted loop></video>
     </div>
 
-    <div class="baron work">
-        <div class="type"><span>dev</span></div>
+    <div class="baron work" data-id="2">
+        <div class="type"><span>créa</span></div>
         <div class="btn_work">
             <a href="https://www.youtube.com/watch?v=0ndssbiE-y4" class="btn" target="_blank">Interview L. Baron
                 <i class="fas fa-external-link-alt"></i></a>
@@ -220,15 +213,15 @@
         <video src="images/baron_vid2.mp4" class="preview-video" muted loop></video>
     </div>
 
-    <div class="wp work">
-        <div class="type"><span>dev</span></div>
+    <div class="wp work" data-id="3">
+        <div class="type"><span>créa</span></div>
         <div class="btn_work">
             <a href="https://siteonepage.moubarak.butmmi.o2switch.site/accueil/" class="btn"
-                target="_blank">Site Wordpress <i class="fas fa-external-link-alt"></i></a>
+                target="_blank">Blog Charlotte Sands <i class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
 
-    <div class="moviz work">
+    <div class="moviz work" data-id="4">
         <div class="type"><span>dev</span></div>
         <div class="btn_work">
             <a href="" class="btn" target="_blank">Moviz <i class="fas fa-external-link-alt"></i></a>
@@ -236,33 +229,48 @@
         <video src="images/moviz_vid.mp4" class="preview-video" muted loop></video>
     </div>
 
-    <div class="ent work">
+    <div class="ent work" data-id="5">
         <div class="type"><span>dev</span></div>
         <div class="btn_work">
-            <a href="https://www.youtube.com/watch?v=0ndssbiE-y4" class="btn" target="_blank">Interview L. Baron
+            <a href="https://www.youtube.com/watch?v=0ndssbiE-y4" class="btn" target="_blank">Refonte ENT
                 <i class="fas fa-external-link-alt"></i></a>
         </div>
         <video src="images/ent_vid.mp4" class="preview-video" muted loop></video>
     </div>
 
-    <div class="cv-video work">
-        <div class="type"><span>dev</span></div>
+    <div class="cv-video work" data-id="6">
+        <div class="type"><span>créa</span></div>
         <div class="btn_work">
             <a href="https://siteonepage.moubarak.butmmi.o2switch.site/accueil/" class="btn"
-                target="_blank">Site Wordpress <i class="fas fa-external-link-alt"></i></a>
+                target="_blank">CV Vidéo <i class="fas fa-external-link-alt"></i></a>
         </div>
     </div>
 
 </div>
-
 </section>
+
+<div class="modal" id="project-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <h2 class="modal-title"></h2>
+        <p class="modal-description"></p>
+        <ul class="modal-details"></ul>
+        <a href="#" target="_blank" class="btn modal-link">Voir le projet</a>
+      </div>
+      <div class="modal-navigation">
+        <button class="prev-project">&larr; Projet Précédent</button>
+        <button class="next-project">Projet Suivant &rarr;</button>
+      </div>
+    </div>
+  </div>
 
 
 <section class="opquast">
     <h3>Opquast</h3>
-    <p>Je suis formée aux règles Opquast, qui concernent les bonnes pratiques pour la qualité web, et je passerai la certification en avril 2025.</p>
+    <p class="text">Je suis formée aux règles Opquast, qui concernent les bonnes pratiques pour la qualité web, et je passerai la certification en avril 2025.</p>
 
-    <p>Opquast m’aide à appliquer des bonnes pratiques de qualité web dans mes projets, en me concentrant sur des aspects comme l’accessibilité, la performance et l’ergonomie pour offrir une meilleure expérience utilisateur. Cela me permet de rendre les sites et applications que je crée plus faciles à utiliser, plus rapides et accessibles à un plus grand nombre de personnes, y compris les personnes en situation de handicap. C’est essentiel pour offrir une expérience utilisateur de qualité et répondre aux standards actuels du web.
+    <p class="text">Opquast m’aide à appliquer des bonnes pratiques de qualité web dans mes projets, en me concentrant sur des aspects comme l’accessibilité, la performance et l’ergonomie pour offrir une meilleure expérience utilisateur. Cela me permet de rendre les sites et applications que je crée plus faciles à utiliser, plus rapides et accessibles à un plus grand nombre de personnes, y compris les personnes en situation de handicap. C’est essentiel pour offrir une expérience utilisateur de qualité et répondre aux standards actuels du web.
     </p> <br>
 
     <a href="https://www.opquast.com/" class="btn" target="_blank">Opquast <i class="fas fa-external-link-alt"></i></a>
