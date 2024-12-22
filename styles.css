@@ -385,7 +385,7 @@ h3 {
 
 .projets .baron {
     height: 200px;
-    margin-top: auto;
+    margin: auto;
     background-image: url('images/baron.png');
 }
 
@@ -398,6 +398,7 @@ h3 {
 .projets .moviz {
     background-image: url('images/moviz.png');
     height: 230px; 
+    margin-top: auto;
 }
 
 .projets .ent {
@@ -691,6 +692,21 @@ height: 100%;
 background: rgba(0, 0, 0, 0.8);
 }
 
+.close {
+font-size: 4rem;
+position: absolute;
+top: -20px;
+right: 20px;
+cursor: pointer;
+color: var(--dark-brown);
+transition: all 0.5s ease;
+}
+
+.close:hover {
+transform: rotate(30deg);
+translate: 3px;
+}
+
 .modal-content {
 position: relative;
 margin: 5% auto;
@@ -700,6 +716,7 @@ width: 80%;
 max-width: 600px;
 border-radius: 10px;
 text-align: center;
+background-color: var(--beige);
 }
 
 .modal-body {
@@ -707,12 +724,28 @@ margin-bottom: 20px;
 }
 
 .modal-title {
-font-size: 24px;
-margin-bottom: 10px;
+font-size: 2rem;
+margin-bottom: 2rem;
+margin-top: .5rem;
+}
+
+.modal-group, .modal-context, .modal-type {
+border: var(--dark-brown) 1px solid;
+border-radius: 15px;
+padding: 2px 10px; 
+font-size: .9rem;  
+margin-right: 5px;
+}
+
+.modal-things {
+text-align: left;
 }
 
 .modal-description {
 margin-bottom: 15px;
+text-align: left;
+font-size: 1.1rem;
+margin: 1.5rem 0;
 }
 
 .modal-details {
@@ -724,15 +757,7 @@ padding: 0;
 .modal-link {
 display: inline-block;
 margin-top: 10px;
-padding: 10px 20px;
-background: #007BFF;
-color: white;
-text-decoration: none;
-border-radius: 5px;
-}
-
-.modal-link:hover {
-background: #0056b3;
+margin-bottom: 1rem;
 }
 
 .modal-navigation {
@@ -741,38 +766,42 @@ justify-content: space-between;
 }
 
 .modal-navigation button {
-background: #f0f0f0;
+font-family: "Dosis", sans-serif;
+background: var(--light-brown);
+color: var(--dark-brown);
 border: none;
 padding: 10px;
 border-radius: 5px;
 cursor: pointer;
+font-weight: bold;
+transition: all 0.2s ease;
 }
 
 .modal-navigation button:hover {
-background: #ddd;
+background: var(--brown);
 }
+
+.preview-container {
+    position: absolute;
+    bottom: 200px;
+    transform: translateY(-50%);
+    display: none;
+  }
+  
+  .preview-image {
+    width: 150px;
+    object-fit: cover;
+    height: 100px;
+    border-radius: 8px;
+  }
+  
+
 
 /* Icône sur chaque projet */
-.open-modal {
-position: absolute;
-top: 10px;
-right: 10px;
-color: var(--beige);
-font-size: 1.7rem;
-cursor: pointer;
-text-decoration: none;
-z-index: 100;
-}
 
 .open-modal i {
-background: var(--dark-brown);
-border-radius: 50%;
-}
-
-.open-modal:hover {
-color: var(--dark-brown);
-}
-
-.open-modal i:hover {
-background: var(--beige);
+    font-size: 1.3rem;
+    position: relative;
+    top: 2px;
+    right: 3px;
 }
