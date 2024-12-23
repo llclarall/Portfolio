@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Portfolio</title>
+<link rel="icon" href="dessins/dead.png"/>
 <link rel="stylesheet" href="styles.css" />
 <link
     rel="stylesheet"
@@ -18,20 +19,22 @@
 </head>
 
 <body class="dosis">
-<a class="cta btn" href="contact.html">Let's work together!</a>
-
-<nav class="side-nav">
+    <a href="#about_me" class="skip">Aller au contenu</a>
+<!-- <a class="cta btn" href="contact.html">Let's work together!</a>
+ -->
+ <nav class="side-nav">
     <a
     href="#about_me"
     class="nav-icon"
-    title="Le cinéma en quelques données"
+    title="Profil"
     >
-    <img src="" alt="" />
-    <span class="sr-only">Données sur les sorties au cinéma</span>
+    <img src="images/me.png" alt="" />
     </a>
-    <a href="#projets" class="nav-icon" title="Box-Office par genre">
-    <img src="" alt="Diagramme à barre" />
-    <span class="sr-only">Graphique box-office par genre</span>
+    <a href="#projets" class="nav-icon" title="Projets">
+    <img src="images/works.png" alt="" />
+    </a>
+    <a href="#contact" class="nav-icon" title="Contact">
+    <img src="images/contact.png" alt="" />
     </a>
 </nav>
 
@@ -139,7 +142,7 @@
     </div>
 
     <div class="mb">
-    <h3>If my life was a moodboard...</h3>
+    <h3>Si j'étais un site... </h3>
 
     <div class="moodboard">
         <div class="moodboard-item item-1">
@@ -192,6 +195,7 @@
         <img src="moodboard/now.jpg" alt="" />
         <div class="hidden-content">Let your creativity flow 🎨</div>
         </div>
+        <div class="hidden-thingy"><p>...je serais responsive.</p></div>
     </div>
     <button class="reset-button">Reset Positions</button>
     </div>
@@ -238,7 +242,7 @@
         <a
             href="#"
             class="btn open-modal"
-            ><i class="fas fa-info-circle"></i> Interview L. Baron</a>
+            ><i class="fas fa-info-circle"></i> Montage vidéo</a>
         </div>
         <video
         src="images/baron_vid2.mp4"
@@ -255,7 +259,7 @@
             href="#"
             class="btn open-modal"
             target="_blank"
-            ><i class="fas fa-info-circle"></i> Blog Charlotte Sands</a>
+            ><i class="fas fa-info-circle"></i> Blog Wordpress</a>
         </div>
         <video
         src="images/wp.mp4"
@@ -265,26 +269,27 @@
         ></video>
     </div>
 
-
-    <div class="ent work" data-id="5">
-        <div class="type"><span>dev</span></div>
+    <div class="anglais work" data-id="5">
+        <div class="type"><span>créa</span></div>
         <div class="btn_work">
         <a
-            href="https://www.youtube.com/watch?v=0ndssbiE-y4"
-            class="btn"
-            target="_blank"
-            >Refonte ENT <i class="fas fa-external-link-alt"></i
-        ></a>
+            href="#"
+            class="btn open-modal"
+            ><i class="fas fa-info-circle"></i> Less is More</a>
         </div>
         <video
-        src="images/ent_vid.mp4"
+        src="images/anglais.mp4"
         class="preview-video"
         muted
         loop
         ></video>
     </div>
 
-    <div class="cv-video work" data-id="6">
+    <div>
+        <img src="dessins/lilo.png" alt="" class="lilo" />
+    </div>
+
+<!--     <div class="cv-video work" data-id="6">
         <div class="type"><span>créa</span></div>
         <div class="btn_work">
         <a
@@ -294,7 +299,8 @@
             >CV Vidéo <i class="fas fa-external-link-alt"></i
         ></a>
         </div>
-    </div>
+    </div> -->
+
     </div>
 </section>
 
@@ -323,27 +329,24 @@
 </div>
 
 <section class="opquast">
-    <h3>Opquast</h3>
-    <p class="text">
-    Je suis formée aux règles Opquast, qui concernent les bonnes pratiques
-    pour la qualité web, et je passerai la certification en avril 2025.
-    </p>
+    <div class="container">
+        <h3>Opquast</h3>
+        <p class="text">
+        Je suis formée aux règles Opquast, qui concernent les bonnes pratiques
+        pour la qualité web, et je passerai la certification en avril 2025.
+        </p>
+        <p class="text">
+        Opquast m’aide à appliquer des bonnes pratiques de qualité web dans mes
+        projets, en me concentrant sur des aspects comme l’accessibilité, la performance et l’ergonomie pour offrir une meilleure expérience
+        utilisateur. Cela me permet de rendre les sites et applications que je crée plus faciles à utiliser, plus rapides et accessibles à un plus grand nombre de personnes, y compris les personnes en situation de handicap.
+        </p>
+        <br />
+        <a href="https://www.opquast.com/" class="btn" target="_blank"
+        >Opquast <i class="fas fa-external-link-alt"></i
+        ></a>
+    </div>
+    <img src="dessins/ampoule.png" alt="">
 
-    <p class="text">
-    Opquast m’aide à appliquer des bonnes pratiques de qualité web dans mes
-    projets, en me concentrant sur des aspects comme l’accessibilité, la
-    performance et l’ergonomie pour offrir une meilleure expérience
-    utilisateur. Cela me permet de rendre les sites et applications que je
-    crée plus faciles à utiliser, plus rapides et accessibles à un plus
-    grand nombre de personnes, y compris les personnes en situation de
-    handicap. C’est essentiel pour offrir une expérience utilisateur de
-    qualité et répondre aux standards actuels du web.
-    </p>
-    <br />
-
-    <a href="https://www.opquast.com/" class="btn" target="_blank"
-    >Opquast <i class="fas fa-external-link-alt"></i
-    ></a>
 </section>
 
 <!-- section témoignages -->
@@ -353,39 +356,32 @@
     <br />
     <div class="card_container">
     <div class="card">
-        <img src="images/mon_avatar_fondBlanc.png" alt="" />
+        <div class="auteur">
+            <img src="images/mon_avatar_fondBlanc.png" alt="" />
+            <span>Emilie Guerrier</span>
+        </div>
         <p class="text">
-        Clara est une personne très douée en développement web, elle apporte
-        toujours sa touche personnelle et est vraiment investie en cours
-        dans ses différents sites web. Ce qui fait toute sa singularité,
-        c’est qu’elle tient beaucoup à ses travaux dans lesquels elle
-        excelle sans grande difficulté. C’est également un bon leader pour
-        les projets en groupe, elle sait comment mener à bien un projet en
-        groupe.
+        Clara est une personne très douée en développement web, elle apporte toujours sa touche personnelle et est vraiment investie en cours dans ses différents sites web. Ce qui fait toute sa singularité, c’est qu’elle tient beaucoup à ses travaux. C’est également un bon leader pour les projets en groupe.
         </p>
     </div>
 
     <div class="card">
-        <img src="images/mon_avatar_fondBlanc.png" alt="" />
+        <div class="auteur">
+            <img src="images/mon_avatar_fondBlanc.png" alt="" />
+            <span>Alyssa Karahan</span>
+        </div>
         <p class="text">
-        Ça fait presque deux ans qu'on travaille ensemble, et franchement,
-        Clara est une vraie perle. Toujours pleine d’idées et d’énergie,
-        elle est super impliquée dans ses projets et travaille de manière
-        très efficace. Elle a un sens du détail incroyable et sait toujours
-        trouver des solutions à des problèmes qu’on rencontre. C’est une
-        développeuse super talentueuse, et je suis sûr qu’elle ira loin !
+        Ça fait presque deux ans qu'on travaille ensemble, et franchement, Clara est une vraie perle. Toujours pleine d’idées et d’énergie, elle est super impliquée dans ses projets et travaille de manière très efficace. Elle a un sens du détail incroyable et sait toujours trouver des solutions à des problèmes qu’on rencontre. 
         </p>
     </div>
 
     <div class="card">
-        <img src="images/mon_avatar_fondBlanc.png" alt="" />
+        <div class="auteur">
+            <img src="images/mon_avatar_fondBlanc.png" alt="" />
+            <span>Mélissa Cumur</span>
+        </div>
         <p class="text">
-        Clara une personne super investie, qui a toutes les qualités pour
-        réussir en développement web. Je trouve qu’elle a une vraie capacité
-        à apprendre vite et à s’adapter ce qui est plutôt important pour son
-        avenir. Elle est à l’écoute et c’est quelqu’un avec qui on a plaisir
-        à collaborer, que ce soit sur un projet ou dans une discussion plus
-        large.
+        Clara est une personne super investie. Je trouve qu’elle a une vraie capacité à apprendre vite et à s’adapter ce qui est plutôt important pour son avenir. Elle est à l’écoute et c’est quelqu’un avec qui on a plaisir à collaborer, que ce soit sur un projet ou dans une discussion plus large. 
         </p>
     </div>
     </div>
@@ -398,14 +394,36 @@
     <br />
     <div class="card">
     <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-        officia totam aperiam consequuntur, error maxime facilis, quasi magni
-        tempore culpa autem saepe doloribus at, nihil vel tenetur magnam
-        recusandae ipsa.
+        Vous avez un projet en tête ou vous souhaitez simplement discuter ? N'hésitez pas à me contacter !
     </p>
     </div>
+
+    <div class="container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:contact@votremail.com">clara.moubarak75@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Téléphone</h3>
+            <p><a href="tel:+123456789">+33 0783624520</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Suivez-moi</h3>
+            <ul class="social-links">
+              <li><a href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/llclarall/" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 </section>
 
+<footer>
+    <p>© 2025 Clara Moubarak</p>
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

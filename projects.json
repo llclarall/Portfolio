@@ -2,14 +2,13 @@
     {
         "id": 1,
         "title": "Moviz",
-        "description": "Moviz est un site de data visualisation dédié à l’analyse des films sortis au cinéma. Il propose des graphiques dynamiques, des animations interactives et des éléments multimédias pour illustrer les tendances du cinéma au fil du temps.",
+        "description": "Moviz est un site de data visualisation dédié à l’analyse des films sortis au cinéma. Il propose des graphiques dynamiques, des animations interactives et des éléments multimédias pour illustrer les tendances du cinéma au fil du temps. Je me suis occupée de dévelopement du site en suivant les maquettes réalisées par les membres de mon groupe.",
         "details": [
             "<strong>Technologies</strong> : Javascript, HTML, CSS <br> <br>",
             "<strong>Bibliothèques</strong> : D3.js, ChartJS <br> <br>" ,
             "<strong>Date</strong> : Décembre 2024 <br> <br>" 
         ],
         "link": "https://llclarall.github.io/Moviz/",
-        "date": "décembre 2024",
         "context": "Projet universitaire",
         "group": "En groupe",
         "type": "Développement front-end",
@@ -18,46 +17,58 @@
     {
         "id": 2,
         "title": "Hommade Hommous",
-        "description": "Site de réservation pour un restaurant fictif spécialisé dans le houmous.",
+        "description": "Hommade Hommous est un site de réservation réalisé en 1ère année d'études pour des ateliers de cuisine libanaise fictifs.",
         "details": [
-            "<strong>Technologies</strong> : PHP, MySQL, HTML, CSS",
-            "Objectif : Simplifier la réservation"
+            "<strong>Technologies</strong> : PHP, MySQL, HTML, CSS <br> <br>",
+            "<strong>Date</strong> : Mai 2024 <br> <br>" 
         ],
         "link": "https://resaweb.moubarak.butmmi.o2switch.site/index.php",
-        "date": "décembre 2024",
         "context": "Projet universitaire",
-        "group": "En groupe",
-        "type": "Développement front-end",
+        "group": "Seule",
+        "type": "Développement back-end",
         "image": "images/hh.png"
     },
     {
         "id": 3,
-        "title": "Interview L. Baron",
-        "description": "Vidéo d'interview créative réalisée avec une approche documentaire.",
+        "title": "Montage vidéo",
+        "description": "Dans le cadre d'un projet universitaire audiovisuel, j'ai tourné une interview avec le photographe Ludovic Baron à la Samaritaine. J'ai ensuite monté la vidéo et ajouté des éléments graphiques.",
         "details": [
-            "Logiciels : Premiere Pro, After Effects",
-            "Durée : 3 minutes"
+            "<strong>Logiciel</strong> : Premiere Pro <br> <br>",
+            "<strong>Durée</strong> : 6 minutes <br> <br>",
+            "<strong>Date</strong> : Décembre 2023 <br> <br>"
         ],
         "link": "https://www.youtube.com/watch?v=0ndssbiE-y4",
-        "date": "décembre 2024",
         "context": "Projet universitaire",
-        "group": "En groupe",
-        "type": "Développement front-end",
+        "group": "Seule",
+        "type": "Audiovisuel",
         "image": "images/baron.png"
     },
     {
         "id": 4,
-        "title": "Blog Charlotte Sands",
-        "description": "Site de blog wordpress pour une artiste.",
+        "title": "Blog Wordpress",
+        "description": "Pour ce projet, nous devions réalisé un blog Wordpress pour l'artiste de notre choix, dans mon cas Charlotte Sands.",
         "details": [
-            "<strong>Technologies</strong> : Wordpress",
-            "Objectif : Simplifier la réservation"
+            "<strong>Technologies</strong> : Wordpress <br> <br>",
+            "<strong>Date</strong> : Décembre 2023"
         ],
         "link": "https://siteonepage.moubarak.butmmi.o2switch.site/accueil/",
-        "date": "décembre 2024",
         "context": "Projet universitaire",
-        "group": "En groupe",
-        "type": "Développement front-end",
+        "group": "Seule",
+        "type": "CMS (Content Management System)",
         "image": "images/wp.png"
+    },
+    {
+        "id": 5,
+        "title": "Less is more",
+        "description": "Lors d'un cours d'anglais, nous devions faire une présentation sous la forme d'un Ted Talk sur un sujet de notre choix. J'ai choisi de parler de comment les petites choses peuvent nous aider à être plus heureux en prenant l'exemple de la lecture du livre The Girl on the Train.",
+        "details": [
+            "<strong>Langue</strong> : Anglais <br> <br>",
+            "<strong>Date</strong> : Octobre 2023"
+        ],
+        "link": "https://docs.google.com/document/d/e/2PACX-1vR2B_YOKnQYAF2JY4BEP2t3Luh-cg8YsD-LGiMx7YlXvvx45kvusu0EbfgBS471VsZCNKZxdTleYeqA/pub",
+        "context": "Projet universitaire",
+        "group": "Seule",
+        "type": "Ted Talk",
+        "image": "images/anglais.jpg"
     }
 ]
