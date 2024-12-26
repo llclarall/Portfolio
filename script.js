@@ -148,6 +148,7 @@ const modalContext = document.querySelector('.modal-context');
 const modalType = document.querySelector('.modal-type');
 const modalLink = document.querySelector('.modal-link');
 const modalGroup = document.querySelector('.modal-group');
+const modalImage = document.querySelector('.modal-image');
 const closeBtn = document.querySelector('.close');
 const nextBtn = document.querySelector('.next-project');
 const prevBtn = document.querySelector('.prev-project');
@@ -187,6 +188,7 @@ function showProjectModal(index) {
   modalContext.textContent = project.context;
   modalGroup.textContent = project.group;
   modalType.textContent = project.type;
+  modalImage.src = project.image;
   modalDescription.textContent = project.description;
   modalDetails.innerHTML = project.details.map(detail => `<li>${detail}</li>`).join('');
   modalLink.href = project.link;

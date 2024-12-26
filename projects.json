@@ -17,7 +17,7 @@
     {
         "id": 2,
         "title": "Hommade Hommous",
-        "description": "Hommade Hommous est un site de réservation réalisé en 1ère année d'études pour des ateliers de cuisine libanaise fictifs.",
+        "description": "Hommade Hommous est un site de réservation réalisé en 1ère année d'études pour des ateliers de cuisine libanaise fictifs, favorisant les rencontres entre les participants. En plus de l'HTML, CSS et JavaScript, j'ai utilisé PHP et MySQL pour gérer la base de données. Le site intègre un filtre et une barre de recherche en PHP, un tri en JavaScript, et envoie un mail de confirmation pour chaque réservation.",
         "details": [
             "<strong>Technologies</strong> : PHP, MySQL, HTML, CSS <br> <br>",
             "<strong>Date</strong> : Mai 2024 <br> <br>" 
@@ -31,7 +31,7 @@
     {
         "id": 3,
         "title": "Montage vidéo",
-        "description": "Dans le cadre d'un projet universitaire audiovisuel, j'ai tourné une interview avec le photographe Ludovic Baron à la Samaritaine. J'ai ensuite monté la vidéo et ajouté des éléments graphiques.",
+        "description": "Dans le cadre d’un projet universitaire, nous avons organisé et tourné une interview avec le photographe Ludovic Baron dans une salle privée de la Samaritaine, que nous avions préalablement sollicitée. Une fois le tournage terminé, chacun devait monter l’interview individuellement, en y intégrant un sous-titrage en anglais. Ce projet a marqué ma première expérience professionnelle dans des conditions réelles du monde du travail.",
         "details": [
             "<strong>Logiciel</strong> : Premiere Pro <br> <br>",
             "<strong>Durée</strong> : 6 minutes <br> <br>",
@@ -46,7 +46,7 @@
     {
         "id": 4,
         "title": "Blog Wordpress",
-        "description": "Pour ce projet, nous devions réalisé un blog Wordpress pour l'artiste de notre choix, dans mon cas Charlotte Sands.",
+        "description": "Pour ce projet, nous devions réalisé un blog Wordpress pour l'artiste de notre choix, dans mon cas Charlotte Sands. Ce projet m’a permis d’approfondir mes compétences en CMS, en design web et en gestion de contenu.",
         "details": [
             "<strong>Technologies</strong> : Wordpress <br> <br>",
             "<strong>Date</strong> : Décembre 2023"
@@ -60,7 +60,7 @@
     {
         "id": 5,
         "title": "Less is more",
-        "description": "Lors d'un cours d'anglais, nous devions faire une présentation sous la forme d'un Ted Talk sur un sujet de notre choix. J'ai choisi de parler de comment les petites choses peuvent nous aider à être plus heureux en prenant l'exemple de la lecture du livre The Girl on the Train.",
+        "description": "Lors d’un cours d’anglais, j’ai réalisé une présentation sous forme de Ted Talk sur un sujet de mon choix. J’ai choisi de parler de l’importance des petites choses pour nous rendre plus heureux, en m’appuyant sur l’exemple du livre The Girl on the Train. J’y ai exploré comment des moments simples, comme la lecture, peuvent apporter du réconfort au quotidien.",
         "details": [
             "<strong>Langue</strong> : Anglais <br> <br>",
             "<strong>Date</strong> : Octobre 2023"
