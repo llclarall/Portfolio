@@ -294,6 +294,38 @@ prevBtn.addEventListener('mouseleave', () => {
 
 
 
+/* LANGUE */  
+
+// script.js
+document.querySelectorAll(".language-selector button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedLang = button.getAttribute("data-lang");
+    changeLanguage(selectedLang);
+  });
+});
+
+function changeLanguage(lang) {
+  // Enregistre la langue dans localStorage
+  localStorage.setItem("preferredLanguage", lang);
+
+  // Parcourt tous les éléments avec data-key
+  document.querySelectorAll("[data-key]").forEach((element) => {
+    const key = element.getAttribute("data-key");
+    if (translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+
+  // Change également le titre de la page
+  document.title = translations[lang].title;
+}
+
+// Charge la langue préférée au démarrage
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("preferredLanguage") || "fr";
+  changeLanguage(savedLang);
+});
+
 
 
 
