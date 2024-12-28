@@ -140,6 +140,7 @@ window.addEventListener('resize', () => {
 
 /* POP UP PROJETS */
 
+// Initialisation des variables
 const modal = document.getElementById('project-modal');
 const modalTitle = document.querySelector('.modal-title');
 const modalDescription = document.querySelector('.modal-description');
@@ -157,20 +158,65 @@ const previewImage = document.querySelector('.preview-image');
 
 let projects = [];
 let currentProjectIndex = 0;
+let currentLang = 'fr'; // Langue par défaut
 
 // Charger les projets depuis le fichier JSON
-fetch('projects.json')
+fetch('projects2.json')
   .then(response => {
     if (!response.ok) throw new Error('Erreur lors du chargement des projets.');
     return response.json();
   })
   .then(data => {
-    projects = data;
-    initializeModals();
+    projects = data;  // Charger les projets dans les deux langues
+    initializeModals();  // Initialiser les modales
   })
   .catch(error => console.error(error));
 
-// Initialiser les modales après le chargement des projets
+// Gestion des boutons de sélection de langue
+document.querySelectorAll(".language-selector button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedLang = button.getAttribute("data-lang");
+    changeLanguage(selectedLang); // Changer la langue
+  });
+});
+
+function changeLanguage(lang) {
+  currentLang = lang;
+  // Enregistrer la langue choisie dans le localStorage
+  localStorage.setItem("preferredLanguage", lang);
+
+  // Mettre à jour les textes dans l'interface sans toucher aux icônes
+  document.querySelectorAll("[data-key]").forEach((element) => {
+    const key = element.getAttribute("data-key");
+
+    // Vérifier si la traduction existe avant de la remplacer
+    if (translations[lang][key]) {
+      // Si l'élément contient un <span> avec un texte à traduire, on ne touche pas aux autres éléments
+      if (element.tagName.toLowerCase() === 'span') {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+
+  // Mettre à jour le titre de la page
+  document.title = translations[lang].title;
+
+  // Recharger les projets dans la langue choisie
+  loadProjectsForLang(lang);
+}
+
+// Charger les projets dans la langue choisie
+function loadProjectsForLang(lang) {
+  fetch('projects2.json')
+    .then(response => response.json())
+    .then(data => {
+      projects = data[lang];  // Charger les projets dans la langue choisie
+      initializeModals();  // Réinitialiser les modales
+    })
+    .catch(error => console.error(error));
+}
+
+// Initialiser les modales
 function initializeModals() {
   document.querySelectorAll('.open-modal').forEach((icon, index) => {
     icon.addEventListener('click', (e) => {
@@ -241,30 +287,9 @@ function updatePreview(index, direction) {
 
   // Positionner la prévisualisation en fonction du bouton hover
   if (direction === "next") {
-    previewContainer.style.left = nextBtn.offsetLeft + nextBtn.offsetWidth + 'px'; 
-  } else if (direction === "prev") {
-    previewContainer.style.left = prevBtn.offsetLeft - previewContainer.offsetWidth - '0px'; 
-  }
-
-  previewContainer.style.display = 'block';
-}
-
-// Fonction de mise à jour des prévisualisations d'image
-function updatePreview(index, direction) {
-  const project = projects[index];
-  if (project && project.image) {
-    previewImage.src = project.image;
-  } else {
-    previewImage.src = 'images/default.jpg'; // Image par défaut si l'image est manquante
-  }
-
-  // Positionner la prévisualisation en fonction du bouton hover
-  if (direction === "next") {
-    // Position à droite du bouton "Suivant"
     previewContainer.style.left = (nextBtn.offsetLeft + nextBtn.offsetWidth - 263) + 'px';
     previewContainer.style.top = nextBtn.offsetTop + 'px'; // Aligner avec le bouton sur l'axe vertical
   } else if (direction === "prev") {
-    // Position à gauche du bouton "Précédent"
     previewContainer.style.left = (prevBtn.offsetLeft - previewContainer.offsetWidth + 127) + 'px';
     previewContainer.style.top = prevBtn.offsetTop + 'px'; // Aligner avec le bouton sur l'axe vertical
   }
@@ -291,41 +316,11 @@ prevBtn.addEventListener('mouseleave', () => {
   previewContainer.style.display = 'none';
 });
 
-
-
-
-/* LANGUE */  
-
-// script.js
-document.querySelectorAll(".language-selector button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const selectedLang = button.getAttribute("data-lang");
-    changeLanguage(selectedLang);
-  });
-});
-
-function changeLanguage(lang) {
-  // Enregistre la langue dans localStorage
-  localStorage.setItem("preferredLanguage", lang);
-
-  // Parcourt tous les éléments avec data-key
-  document.querySelectorAll("[data-key]").forEach((element) => {
-    const key = element.getAttribute("data-key");
-    if (translations[lang][key]) {
-      element.textContent = translations[lang][key];
-    }
-  });
-
-  // Change également le titre de la page
-  document.title = translations[lang].title;
-}
-
-// Charge la langue préférée au démarrage
+// Charger la langue préférée au démarrage
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("preferredLanguage") || "fr";
   changeLanguage(savedLang);
 });
-
 
 
 

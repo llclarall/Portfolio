@@ -38,10 +38,10 @@
     </a>
 </nav>
 
-<div class="language-selector">
-    <button data-lang="fr">🇫🇷 Français</button>
-    <button data-lang="en">🇬🇧 English</button>
-  </div>
+<div class="language-selector" id="language-selector">
+    <button data-lang="fr" id="btn-fr">🇫🇷 Français</button>
+    <button data-lang="en" id="btn-en">🇬🇧 English</button>
+</div>
 
 <!-- page d'accueil -->
 <section class="home">
@@ -241,8 +241,8 @@
         <div class="btn_work">
         <a
             href="#"
-            class="btn open-modal"
-            ><i class="fas fa-info-circle"></i> Montage vidéo</a>
+            class="btn open-modal" data-key="baron"
+            ><i class="fas fa-info-circle"></i> <span data-key="baron">Montage vidéo</span></a>
         </div>
         <video
         src="images/baron_vid2.mp4"

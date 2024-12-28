@@ -18,6 +18,7 @@ fr: {
     follow: "Suivez-moi",
     previous: "Projet précédent",
     next: "Projet suivant",
+    baron: "Montage vidéo",
 },
 en: {
     about: "About Me",
@@ -37,5 +38,6 @@ en: {
     follow: "Follow me",
     previous: "Previous project",
     next: "Next project",
+    baron: "Video editing",
 },
 };
