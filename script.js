@@ -182,27 +182,20 @@ document.querySelectorAll(".language-selector button").forEach((button) => {
 
 function changeLanguage(lang) {
   currentLang = lang;
-  // Enregistrer la langue choisie dans le localStorage
   localStorage.setItem("preferredLanguage", lang);
 
-  // Mettre à jour les textes dans l'interface sans toucher aux icônes
   document.querySelectorAll("[data-key]").forEach((element) => {
     const key = element.getAttribute("data-key");
 
-    // Vérifier si la traduction existe avant de la remplacer
-    if (translations[lang][key]) {
-      // Si l'élément contient un <span> avec un texte à traduire, on ne touche pas aux autres éléments
-      if (element.tagName.toLowerCase() === 'span') {
-        element.textContent = translations[lang][key];
-      }
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    } else {
+      console.warn(`Traduction manquante : ${key} pour la langue ${lang}`);
     }
   });
 
-  // Mettre à jour le titre de la page
-  document.title = translations[lang].title;
-
-  // Recharger les projets dans la langue choisie
-  loadProjectsForLang(lang);
+  document.title = translations[lang]?.title || "Portfolio";
+  loadProjectsForLang(lang); // Recharger les projets si nécessaire
 }
 
 // Charger les projets dans la langue choisie
@@ -321,6 +314,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("preferredLanguage") || "fr";
   changeLanguage(savedLang);
 });
+
+
+
+/* DARK MODE */
+
+// Sélection du bouton et du body
+const toggleButton = document.getElementById('toggle-dark-mode');
+const body = document.body;
+
+// État initial (vérifie le mode préféré de l'utilisateur)
+if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+  body.classList.add('dark-mode');
+}
+
+// Écouteur d'événement pour le bouton
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Sauvegarder la préférence dans le localStorage
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// Charger la préférence sauvegardée
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+}
 
 
 
