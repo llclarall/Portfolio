@@ -1269,7 +1269,7 @@ to {
 /* Loader */
 
 .loader-container {
-    position: fixed;  /* Utilisation de fixed pour que le loader couvre toute la fenêtre */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -1288,27 +1288,33 @@ to {
 }
 
 .layer:nth-child(1) {
-    background-color: var(--warm-brown);
-    animation-delay: .9s;
+    background-color: var(--light-brown);
+    animation-delay: 1.1s;
     z-index: 1;  /* Assurez-vous que cette couche se place derrière les autres */
 }
 
 .layer:nth-child(2) {
-    background-color: var(--light-brown);
-    animation-delay: 0.85s;
+    background-color: var(--dark-brown);
+    animation-delay: 1s;
     z-index: 2;
 }
 
 .layer:nth-child(3) {
-    background-color: var(--dark-brown);
-    animation-delay: 0.7s;
+    background-color: var(--brown);
+    animation-delay: 0.84s;
     z-index: 3;
 }
 
 .layer:nth-child(4) {
+    background-color: var(--warm-brown);
+    animation-delay: 0.7s;
+    z-index: 4;
+}
+
+.layer:nth-child(5) {
     background-color: var(--beige);
     animation-delay: 0.65s;
-    z-index: 4;
+    z-index: 5;
 }
 
 .layer img {
@@ -1319,7 +1325,6 @@ to {
     width: 170px;
     height: auto;
     object-fit: contain;
-    animation: pulse 2s ease-out alternate;
 }
 
 
@@ -1331,3 +1336,4 @@ to {
         transform: translateY(-100%);  /* Se déplace vers le haut jusqu'à disparaître */
     }
 }
+

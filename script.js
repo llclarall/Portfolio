@@ -394,16 +394,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Ripple effect
-/* document.addEventListener("click", (e) => {
-  const ripple = document.createElement("span");
-  ripple.style.left = `${e.clientX}px`;
-  ripple.style.top = `${e.clientY}px`;
-  ripple.className = "ripple";
-  document.body.appendChild(ripple);
-  setTimeout(() => ripple.remove(), 1000);
+// Cacher loader une fois fini
+const loaderContainer = document.querySelector('.loader-container');
+
+loaderContainer.addEventListener('animationend', () => {
+    setTimeout(() => {
+        loaderContainer.style.display = 'none'; 
+    }, 500); 
 });
- */
-
-
-
