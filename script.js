@@ -365,12 +365,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const darkModeButton = document.getElementById('toggle-dark-mode');
   const modeIcon = document.getElementById('mode-icon');
   const body = document.body;
-  
+  const logoImage = document.getElementById('logo-image');  // Cibler l'image du logo
+
   // Vérifier si le mode sombre est déjà activé dans le localStorage
   if (localStorage.getItem('dark-mode') === 'enabled') {
       body.classList.add('dark-mode');
       modeIcon.classList.remove('fa-moon');
       modeIcon.classList.add('fa-sun');
+      logoImage.src = 'images/logo-beige.png';  // Changer le logo pour le mode sombre
   }
 
   // Fonction pour activer/désactiver le mode sombre
@@ -380,17 +382,20 @@ document.addEventListener("DOMContentLoaded", function() {
           modeIcon.classList.remove('fa-sun');
           modeIcon.classList.add('fa-moon');
           localStorage.setItem('dark-mode', 'disabled');
+          logoImage.src = 'images/logo.png';  // Revenir au logo original en mode clair
       } else {
           body.classList.add('dark-mode');
           modeIcon.classList.remove('fa-moon');
           modeIcon.classList.add('fa-sun');
           localStorage.setItem('dark-mode', 'enabled');
+          logoImage.src = 'images/logo-beige.png';  // Changer le logo pour le mode sombre
       }
   }
 
   // Ajouter un événement de clic au bouton
   darkModeButton.addEventListener('click', toggleDarkMode);
 });
+
 
 
 
