@@ -317,35 +317,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/* DARK MODE */
+});
 
-// Sélection du bouton et du body
-const toggleButton = document.getElementById('toggle-dark-mode');
-const body = document.body;
 
-// État initial (vérifie le mode préféré de l'utilisateur)
-if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-  body.classList.add('dark-mode');
-}
 
-// Écouteur d'événement pour le bouton
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
+
+/* BOUTONS LANGUE */
+
+document.addEventListener("DOMContentLoaded", function() {
+  const frButton = document.getElementById('btn-fr');
+  const enButton = document.getElementById('btn-en');
+  const htmlElement = document.documentElement;
+
   
-  // Sauvegarder la préférence dans le localStorage
-  if (body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
+  // Initialisation de la langue par défaut (Français)
+  let currentLanguage = 'fr'; // Par défaut, le site est en français
+  
+  // Fonction pour changer de langue
+  function changeLanguage(language) {
+      if (language === 'fr') {
+          currentLanguage = 'fr';
+          htmlElement.lang = 'fr';
+          frButton.style.display = 'none';
+          enButton.style.display = 'inline-block';
+      } else if (language === 'en') {
+          currentLanguage = 'en';
+          htmlElement.lang = 'en';
+          frButton.style.display = 'inline-block';
+          enButton.style.display = 'none';
+      }
   }
+
+  // Par défaut, afficher le français et masquer l'anglais
+  changeLanguage(currentLanguage);
+
+  // Événements pour les boutons de langue
+  frButton.addEventListener('click', () => changeLanguage('fr'));
+  enButton.addEventListener('click', () => changeLanguage('en'));
 });
 
-// Charger la préférence sauvegardée
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  body.classList.add('dark-mode');
-}
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const darkModeButton = document.getElementById('toggle-dark-mode');
+  const modeIcon = document.getElementById('mode-icon');
+  const body = document.body;
+  
+  // Vérifier si le mode sombre est déjà activé dans le localStorage
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      modeIcon.classList.remove('fa-moon');
+      modeIcon.classList.add('fa-sun');
+  }
+
+  // Fonction pour activer/désactiver le mode sombre
+  function toggleDarkMode() {
+      if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          modeIcon.classList.remove('fa-sun');
+          modeIcon.classList.add('fa-moon');
+          localStorage.setItem('dark-mode', 'disabled');
+      } else {
+          body.classList.add('dark-mode');
+          modeIcon.classList.remove('fa-moon');
+          modeIcon.classList.add('fa-sun');
+          localStorage.setItem('dark-mode', 'enabled');
+      }
+  }
+
+  // Ajouter un événement de clic au bouton
+  darkModeButton.addEventListener('click', toggleDarkMode);
 });
+
+
+
+// Ripple effect
+/* document.addEventListener("click", (e) => {
+  const ripple = document.createElement("span");
+  ripple.style.left = `${e.clientX}px`;
+  ripple.style.top = `${e.clientY}px`;
+  ripple.className = "ripple";
+  document.body.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 1000);
+});
+ */
+

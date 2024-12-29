@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portfolio</title>
-<link rel="icon" href="dessins/dead.png"/>
-<link rel="stylesheet" href="styles.css" />
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Oswald:wght@700&display=swap"
-    rel="stylesheet"
-/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clara Moubarak | Portfolio</title>
+    <link rel="icon" href="images/logo-beige.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="dosis">
+  <body class="dosis">
     <a href="#about_me" class="skip">Aller au contenu</a>
-<!-- <a class="cta btn" href="contact.html">Let's work together!</a>
+    <!-- <a class="cta btn" href="contact.html">Let's work together!</a>
  -->
- <nav class="side-nav">
-    <a
-    href="#about_me"
-    class="nav-icon"
-    title="Profil"
-    >
-    <img src="images/me.png" alt="section profil" />
-    </a>
-    <a href="#projets" class="nav-icon" title="Projets">
-    <img src="images/works.png" alt="section projets" />
-    </a>
-    <a href="#contact" class="nav-icon" title="Contact">
-    <img src="images/contact.png" alt="section contact" />
-    </a>
-</nav>
 
-<div class="language-selector" id="language-selector">
-    <button data-lang="fr" id="btn-fr">🇫🇷 Français</button>
-    <button data-lang="en" id="btn-en">🇬🇧 English</button>
-</div>
+ 
+ 
+ <header>
+	 <div class="header-left">
+		 <a href="index.html" class="logo">
+			 <img src="images/logo.png" alt="logo" />
+			</a>
+			<a href="#" class="portfolio"><span>Portfolio.</span></a>
+      </div>
+		
+      <div class="header-right">
+			<div class="dark-mode">
+				<button id="toggle-dark-mode">
+					<i id="mode-icon" class="fas fa-moon"></i
+						><span class="sr-only">Dark Mode</span>
+					</button>
+				</div>
 
-<button id="toggle-dark-mode">Dark Mode</button>
+				<div class="language-selector" id="language-selector">
+					<button data-lang="fr" id="btn-fr">
+						<img src="images/france.png" alt="site en français" />
+					</button>
+					<button data-lang="en" id="btn-en">
+						<img src="images/royaume-uni.png" alt="site en anglais" />
+					</button>
+				</div>
+			</div>
+		</header>
+		
+		<nav class="side-nav">
+      <a href="#about_me" class="nav-icon" title="Profil">
+			<img src="images/me.png" alt="section profil" />
+      </a>
+      <a href="#projets" class="nav-icon" title="Projets">
+			<img src="images/projets.png" alt="section projets" />
+      </a>
+      <a href="#contact" class="nav-icon" title="Contact">
+			<img src="images/contact2.png" alt="section contact" />
+      </a>
+	</nav>
+	
+	<!-- page d'accueil -->
+	<section class="home">
+		<div class="text">
+			<img src="dessins/champy.png" alt="" class="champy">
+			<h1 id="moving-title">
+				<span>Clara</span><br />
+				<span>Moubarak</span>
+			</h1>
+			<!-- <img src="dessins/creative_developer.png" alt="" /> -->
+			<p>Creative developer</p>
+      </div>
 
-
-<!-- page d'accueil -->
-<section class="home">
-    <div class="text">
-    <h1 id="moving-title">
-        <span>port</span><br />
-        <span>folio.</span>
-    </h1>
-    <p>Clara Moubarak</p>
-    </div>
-
-    <!-- 
+      <!-- 
 <div class="liste">
 <hr>
 <nav class="qualifs">
@@ -68,232 +88,240 @@
 </nav>
 <hr>
 </div> -->
-</section>
+    </section>
 
-<!-- section about me -->
+    <!-- section about me -->
 
-<section class="about_me" id="about_me">
-    <h2 data-key="about">à propos</h2>
-    <br />
-    <div class="card">
-    <img class="pdp" src="images/photo identité.png" alt="" />
-    <p class="text" data-key="intro">
-        Salut ! Je m'appelle Clara, je suis étudiante en développement web basée à Paris. Je suis passionnée par la création de sites web beaux et fonctionnels. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et dévelpper mes compétences. Je suis actuellement à la recherche d'un stage en tant que développeuse front-end. N'hésitez pas à me contacter si vous souhaitez collaborer!
-    </p>
-    <div class="abt_btns">
-        <div class="abt_btn">
-        <a class="btn cv" href="CV.pdf" download="CV.pdf" data-key="cv" title="télécharger mon CV">Mon CV <i class="fa-solid fa-download"></i
-        ></a>
-        <a
-            class="btn linkedin"
-            href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/"
+    <section class="about_me" id="about_me">
+      <h2 data-key="about">à propos</h2>
+      <br />
+      <div class="card">
+        <img class="pdp" src="images/photo identité.png" alt="" />
+        <p class="text" data-key="intro">
+          Salut ! Je m'appelle Clara, je suis étudiante en développement web
+          basée à Paris. Je suis passionnée par la création de sites web beaux
+          et fonctionnels. Je suis toujours à la recherche de nouveaux défis et
+          d'opportunités pour apprendre et dévelpper mes compétences. Je suis
+          actuellement à la recherche d'un stage en tant que développeuse
+          front-end. N'hésitez pas à me contacter si vous souhaitez collaborer!
+        </p>
+        <div class="abt_btns">
+          <div class="abt_btn">
+            <a
+              class="btn cv"
+              href="CV.pdf"
+              download="CV.pdf"
+              data-key="cv"
+              title="télécharger mon CV"
+              >Mon CV <i class="fa-solid fa-download"></i
+            ></a>
+            <a
+              class="btn linkedin"
+              href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/"
+              target="_blank"
+              >LinkedIn <i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
+          <a
+            href="https://github.com/llclarall/"
+            class="btn github"
             target="_blank"
-            >LinkedIn <i class="fas fa-external-link-alt"></i
-        ></a>
+            >Github <i class="fas fa-external-link-alt"></i
+          ></a>
         </div>
-        <a
-        href="https://github.com/llclarall/"
-        class="btn github"
-        target="_blank"
-        >Github <i class="fas fa-external-link-alt"></i
-        ></a>
-    </div>
-    </div>
-    <br /><br />
+      </div>
+      <br /><br />
 
-    <img class="dessin" src="dessins/birds2.png" alt="" />
+      <img class="dessin" src="dessins/birds2.png" alt="" />
 
-    <h3>Skills</h3>
+      <h3>Skills</h3>
 
-    <div class="skills">
-    <div class="skills_dev">
-        <div class="skill">
-        <img class="logo_skills" src="images/html_css.png" alt="" />
-        <span>HTML / CSS</span>
+      <div class="skills">
+        <div class="skills_dev">
+          <div class="skill">
+            <img class="logo_skills" src="images/html_css.png" alt="" />
+            <span>HTML / CSS</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/js.png" alt="" />
+            <span>Javascript</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/php.png" alt="" />
+            <span>PHP</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/MySQL.png" alt="" />
+            <span>MySQL</span>
+          </div>
         </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/js.png" alt="" />
-        <span>Javascript</span>
+        <div class="skills_crea">
+          <div class="skill">
+            <img class="logo_skills" src="images/photoshop.png" alt="" />
+            <span>Photoshop</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/premiere.png" alt="" />
+            <span>Premiere Pro</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/figma.png" alt="" />
+            <span>Figma</span>
+          </div>
+          <div class="skill">
+            <img class="logo_skills" src="images/wordpress.png" alt="" />
+            <span>Wordpress</span>
+          </div>
         </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/php.png" alt="" />
-        <span>PHP</span>
-        </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/MySQL.png" alt="" />
-        <span>MySQL</span>
-        </div>
-    </div>
-    <div class="skills_crea">
-        <div class="skill">
-        <img class="logo_skills" src="images/photoshop.png" alt="" />
-        <span>Photoshop</span>
-        </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/premiere.png" alt="" />
-        <span>Premiere Pro</span>
-        </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/figma.png" alt="" />
-        <span>Figma</span>
-        </div>
-        <div class="skill">
-        <img class="logo_skills" src="images/wordpress.png" alt="" />
-        <span>Wordpress</span>
-        </div>
-    </div>
-    </div>
+      </div>
 
-    <div class="mb">
-    <h3 data-key="analogie">Si j'étais un site... </h3>
+      <div class="mb">
+        <h3 data-key="analogie">Si j'étais un site...</h3>
 
-    <div class="moodboard">
-        <div class="moodboard-item item-1">
-        <img src="moodboard/bébé-moi.JPG" alt="Placeholder" />
-        <div class="hidden-content">
-            Surprise! Here is a cool anecdote 🎉
-        </div>
-        </div>
-        <div class="moodboard-item item-2">
-        <img src="moodboard/cassettes.jpg" alt="" />
-        <div class="hidden-content">Here is a GIF or fun fact 😊</div>
-        </div>
-        <div class="moodboard-item item-3">
-        <img src="moodboard/frog.jpg" alt="" />
-        <div class="hidden-content">Did you know? 🧐</div>
-        </div>
-        <div class="moodboard-item item-4">
-        <img src="moodboard/images.jpg" alt="" />
-        <div class="hidden-content">An inspiring quote ✨</div>
-        </div>
-        <div class="moodboard-item item-5">
-        <img src="moodboard/joke.jpg" alt="" />
-        <div class="hidden-content">A secret revealed! 🤫</div>
-        </div>
-        <div class="moodboard-item item-6">
-        <img src="moodboard/lostsouls.jpg" alt="" />
-        <div class="hidden-content">Keep exploring 🔍</div>
-        </div>
-        <div class="moodboard-item item-7">
-        <img src="moodboard/music.jpg" alt="" />
-        <div class="hidden-content">Explore new things 💡</div>
-        </div>
-        <div class="moodboard-item item-8">
-        <img src="moodboard/poison.jpg" alt="" />
-        <div class="hidden-content">Curious? Keep looking 🔎</div>
-        </div>
-        <div class="moodboard-item item-9">
-        <img src="moodboard/programming.jpg" alt="" />
-        <div class="hidden-content">A fresh perspective 👀</div>
-        </div>
-        <div class="moodboard-item item-10">
-        <img src="moodboard/punk.jpg" alt="" />
-        <div class="hidden-content">Get inspired 🌟</div>
-        </div>
-        <div class="moodboard-item item-11">
-        <img src="moodboard/sign.jpg" alt="" />
-        <div class="hidden-content">Let your creativity flow 🎨</div>
-        </div>
-        <div class="moodboard-item item-12">
-        <img src="moodboard/now.jpg" alt="" />
-        <div class="hidden-content">Let your creativity flow 🎨</div>
-        </div>
-        <div class="hidden-thingy"><p data-key="responsive">...je serais responsive :)</p></div>
-    </div>
-    <button class="reset-button" data-key="positions">Réinitialiser les positions</button>
-    </div>
-</section>
-
-<!-- section projets -->
-
-<section class="projets" id="projets">
-    <h2 data-key="projets">Projets</h2>
-    <br><br>
-    
-    <div class="works">
-        <div class="moviz work" data-id="1">
-            <div class="type"><span>dev</span></div>
-            <div class="btn_work">
-            <a href="#" class="btn open-modal"
-                ><i class="fas fa-info-circle"></i> Moviz</a>
+        <div class="moodboard">
+          <div class="moodboard-item item-1">
+            <img src="moodboard/bébé-moi.JPG" alt="Placeholder" />
+            <div class="hidden-content">
+              Surprise! Here is a cool anecdote 🎉
             </div>
-            <video
+          </div>
+          <div class="moodboard-item item-2">
+            <img src="moodboard/cassettes.jpg" alt="" />
+            <div class="hidden-content">Here is a GIF or fun fact 😊</div>
+          </div>
+          <div class="moodboard-item item-3">
+            <img src="moodboard/frog.jpg" alt="" />
+            <div class="hidden-content">Did you know? 🧐</div>
+          </div>
+          <div class="moodboard-item item-4">
+            <img src="moodboard/images.jpg" alt="" />
+            <div class="hidden-content">An inspiring quote ✨</div>
+          </div>
+          <div class="moodboard-item item-5">
+            <img src="moodboard/joke.jpg" alt="" />
+            <div class="hidden-content">A secret revealed! 🤫</div>
+          </div>
+          <div class="moodboard-item item-6">
+            <img src="moodboard/lostsouls.jpg" alt="" />
+            <div class="hidden-content">Keep exploring 🔍</div>
+          </div>
+          <div class="moodboard-item item-7">
+            <img src="moodboard/music.jpg" alt="" />
+            <div class="hidden-content">Explore new things 💡</div>
+          </div>
+          <div class="moodboard-item item-8">
+            <img src="moodboard/poison.jpg" alt="" />
+            <div class="hidden-content">Curious? Keep looking 🔎</div>
+          </div>
+          <div class="moodboard-item item-9">
+            <img src="moodboard/programming.jpg" alt="" />
+            <div class="hidden-content">A fresh perspective 👀</div>
+          </div>
+          <div class="moodboard-item item-10">
+            <img src="moodboard/punk.jpg" alt="" />
+            <div class="hidden-content">Get inspired 🌟</div>
+          </div>
+          <div class="moodboard-item item-11">
+            <img src="moodboard/sign.jpg" alt="" />
+            <div class="hidden-content">Let your creativity flow 🎨</div>
+          </div>
+          <div class="moodboard-item item-12">
+            <img src="moodboard/now.jpg" alt="" />
+            <div class="hidden-content">Let your creativity flow 🎨</div>
+          </div>
+          <div class="hidden-thingy">
+            <p data-key="responsive">...je serais responsive :)</p>
+          </div>
+        </div>
+        <button class="reset-button" data-key="positions">
+          Réinitialiser les positions
+        </button>
+      </div>
+    </section>
+
+    <!-- section projets -->
+
+    <section class="projets" id="projets">
+      <h2 data-key="projets">Projets</h2>
+      <br /><br />
+
+      <div class="works">
+        <div class="moviz work" data-id="1">
+          <div class="type"><span>dev</span></div>
+          <div class="btn_work">
+            <a href="#" class="btn open-modal"
+              ><i class="fas fa-info-circle"></i> Moviz</a
+            >
+          </div>
+          <video
             src="images/moviz_vid.mp4"
             class="preview-video"
             muted
             loop
-            ></video>
+          ></video>
         </div>
 
-    <div class="hh work" data-id="2">
-        <div class="type"><span>dev</span></div>
-        <div class="btn_work">
-        <a href="#" class="btn open-modal"><i class="fas fa-info-circle"></i> Hommade Hommous
-        </a>
+        <div class="hh work" data-id="2">
+          <div class="type"><span>dev</span></div>
+          <div class="btn_work">
+            <a href="#" class="btn open-modal"
+              ><i class="fas fa-info-circle"></i> Hommade Hommous
+            </a>
+          </div>
+          <video
+            src="images/hh_vid2.mp4"
+            class="preview-video"
+            muted
+            loop
+          ></video>
         </div>
-        <video
-        src="images/hh_vid2.mp4"
-        class="preview-video"
-        muted
-        loop
-        ></video>
-    </div>
 
-    <div class="baron work" data-id="3">
-        <div class="type"><span>créa</span></div>
-        <div class="btn_work">
-        <a
-            href="#"
-            class="btn open-modal">
-            <i class="fas fa-info-circle"></i> 
-            <span data-key="baron">Montage vidéo</span></a>
+        <div class="baron work" data-id="3">
+          <div class="type"><span>créa</span></div>
+          <div class="btn_work">
+            <a href="#" class="btn open-modal">
+              <i class="fas fa-info-circle"></i>
+              <span data-key="baron">Montage vidéo</span></a
+            >
+          </div>
+          <video
+            src="images/baron_vid2.mp4"
+            class="preview-video"
+            muted
+            loop
+          ></video>
         </div>
-        <video
-        src="images/baron_vid2.mp4"
-        class="preview-video"
-        muted
-        loop
-        ></video>
-    </div>
 
-    <div class="wp work" data-id="4">
-        <div class="type"><span>créa</span></div>
-        <div class="btn_work">
-        <a
-            href="#"
-            class="btn open-modal"
-            target="_blank"
-            ><i class="fas fa-info-circle"></i> Blog Wordpress</a>
+        <div class="wp work" data-id="4">
+          <div class="type"><span>créa</span></div>
+          <div class="btn_work">
+            <a href="#" class="btn open-modal" target="_blank"
+              ><i class="fas fa-info-circle"></i> Blog Wordpress</a
+            >
+          </div>
+          <video src="images/wp.mp4" class="preview-video" muted loop></video>
         </div>
-        <video
-        src="images/wp.mp4"
-        class="preview-video"
-        muted
-        loop
-        ></video>
-    </div>
 
-    <div class="anglais work" data-id="5">
-        <div class="type"><span>créa</span></div>
-        <div class="btn_work">
-        <a
-            href="#"
-            class="btn open-modal"
-            ><i class="fas fa-info-circle"></i> Less is More</a>
+        <div class="anglais work" data-id="5">
+          <div class="type"><span>créa</span></div>
+          <div class="btn_work">
+            <a href="#" class="btn open-modal"
+              ><i class="fas fa-info-circle"></i> Less is More</a
+            >
+          </div>
+          <video
+            src="images/anglais.mp4"
+            class="preview-video"
+            muted
+            loop
+          ></video>
         </div>
-        <video
-        src="images/anglais.mp4"
-        class="preview-video"
-        muted
-        loop
-        ></video>
-    </div>
 
-    <div>
-        <img src="dessins/lilo.png" alt="" class="lilo" />
-    </div>
+        <div>
+          <img src="dessins/lilo.png" alt="" class="lilo" />
+        </div>
 
-<!--     <div class="cv-video work" data-id="6">
+        <!--     <div class="cv-video work" data-id="6">
         <div class="type"><span>créa</span></div>
         <div class="btn_work">
         <a
@@ -304,110 +332,133 @@
         ></a>
         </div>
     </div> -->
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<div class="modal" id="project-modal">
-    <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="modal-body">
-        <h2 class="modal-title"></h2>
-        <div class="modal-things">
+    <div class="modal" id="project-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <h2 class="modal-title"></h2>
+          <div class="modal-things">
             <span class="modal-type"></span>
             <span class="modal-group"></span>
             <span class="modal-context"></span>
-        </div>
-        <p class="modal-description"></p>
-        <div class="modal-image-container">
-        <ul class="modal-details"></ul>
+          </div>
+          <p class="modal-description"></p>
+          <div class="modal-image-container">
+            <ul class="modal-details"></ul>
             <img src="" alt="" class="modal-image" />
+          </div>
+          <a href="#" target="_blank" class="btn modal-link">Voir le projet</a>
         </div>
-        <a href="#" target="_blank" class="btn modal-link">Voir le projet</a>
-    </div>
-    <div class="modal-navigation">
-        <button class="prev-project dosis" data-key="previous">&larr; Projet Précédent</button>
-        <button class="next-project dosis" data-key="next">Projet Suivant &rarr;</button>
-        <div class="preview-container">
-            <img src="" alt="" class="preview-image">
+        <div class="modal-navigation">
+          <button class="prev-project dosis" data-key="previous">
+            &larr; Projet Précédent
+          </button>
+          <button class="next-project dosis" data-key="next">
+            Projet Suivant &rarr;
+          </button>
+          <div class="preview-container">
+            <img src="" alt="" class="preview-image" />
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-</div>
 
-<section class="opquast">
-    <div class="container">
+    <section class="opquast">
+      <div class="container">
         <h3>Opquast</h3>
         <p class="text" data-key="opquast">
-        Je suis formée aux règles Opquast, qui concernent les bonnes pratiques pour la qualité web, et je passerai la certification en avril 2025.
+          Je suis formée aux règles Opquast, qui concernent les bonnes pratiques
+          pour la qualité web, et je passerai la certification en avril 2025.
         </p>
         <p class="text" data-key="opquast2">
-        Opquast m’aide à appliquer des bonnes pratiques de qualité web dans mes projets, en me concentrant sur des aspects comme l’accessibilité, la performance et l’ergonomie pour offrir une meilleure expérience utilisateur. Cela me permet de rendre les sites et applications que je crée plus faciles à utiliser, plus rapides et accessibles à un plus grand nombre de personnes, y compris les personnes en situation de handicap.
+          Opquast m’aide à appliquer des bonnes pratiques de qualité web dans
+          mes projets, en me concentrant sur des aspects comme l’accessibilité,
+          la performance et l’ergonomie pour offrir une meilleure expérience
+          utilisateur. Cela me permet de rendre les sites et applications que je
+          crée plus faciles à utiliser, plus rapides et accessibles à un plus
+          grand nombre de personnes, y compris les personnes en situation de
+          handicap.
         </p>
         <br />
         <a href="https://www.opquast.com/" class="btn" target="_blank"
-        >Site Opquast <i class="fas fa-external-link-alt"></i
+          >Site Opquast <i class="fas fa-external-link-alt"></i
         ></a>
-    </div>
-    <img src="dessins/kirby.png" alt="">
+      </div>
+      <img src="dessins/kirby.png" alt="" />
+    </section>
 
-</section>
+    <!-- section témoignages -->
 
-<!-- section témoignages -->
-
-<section class="temoignages" id="temoignages">
-    <h2 data-key="temoignages">Témoignages</h2>
-    <br />
-    <div class="card_container">
-    
-    <div class="card">
-        <div class="auteur">
+    <div class="temoignages" id="temoignages">
+      <h2 data-key="temoignages">Avis</h2>
+      <div class="card_container">
+        <div class="card">
+          <div class="auteur">
             <img src="images/aly.png" alt="" />
             <span>Alyssa Karahan</span>
+            <span data-key="aly_tobe">Graphiste en devenir</span>
+          </div>
+          <p class="text" data-key="aly">
+            Ça fait presque deux ans qu'on travaille ensemble, et franchement,
+            Clara est une vraie perle. Toujours pleine d’idées et d’énergie,
+            elle est super impliquée dans ses projets et travaille de manière
+            très efficace. Elle a un sens du détail incroyable et sait toujours
+            trouver des solutions à des problèmes qu’on rencontre.
+          </p>
         </div>
-        <p class="text" data-key="aly">
-        Ça fait presque deux ans qu'on travaille ensemble, et franchement, Clara est une vraie perle. Toujours pleine d’idées et d’énergie, elle est super impliquée dans ses projets et travaille de manière très efficace. Elle a un sens du détail incroyable et sait toujours trouver des solutions à des problèmes qu’on rencontre. 
-        </p>
-    </div>
 
-    <div class="card">
-        <div class="auteur">
+        <div class="card">
+          <div class="auteur">
             <img src="images/emi.png" alt="" />
             <span>Emilie Guerrier</span>
+            <span data-key="emi_tobe">Illustratrice en devenir</span>
+          </div>
+          <p class="text" data-key="emi">
+            Clara est une personne très douée en développement web, elle apporte
+            toujours sa touche personnelle et est vraiment investie en cours
+            dans ses différents sites web. Ce qui fait toute sa singularité,
+            c’est qu’elle tient beaucoup à ses travaux. C’est également un bon
+            leader pour les projets en groupe.
+          </p>
         </div>
-        <p class="text" data-key="emi">
-        Clara est une personne très douée en développement web, elle apporte toujours sa touche personnelle et est vraiment investie en cours dans ses différents sites web. Ce qui fait toute sa singularité, c’est qu’elle tient beaucoup à ses travaux. C’est également un bon leader pour les projets en groupe.
-        </p>
-    </div>
 
-    <div class="card">
-        <div class="auteur">
+        <div class="card">
+          <div class="auteur">
             <img src="images/mel.png" alt="" />
-            <span>Mélissa Cumur</span>
+            <span>Emilie  Desgranges</span>
+            <span data-key="mel_tobe">Développeuse web en devenir</span>
+          </div>
+          <p class="text" data-key="mel">
+            Clara est une développeuse rayonnante et c'est un plaisir de pouvoir travailler à ses côtés. Elle produit des sites qui sont à la fois beaux et fonctionnels. Son dynamisme, sa bonne humeur et son efficacité sont contagieux. Elle s'applique dans son code et elle est communicante, ce qui permet au projet d'avancer rapidement dans la bonne direction.
+          </p>
         </div>
-        <p class="text" data-key="mel">
-        Clara est une personne super investie. Je trouve qu’elle a une vraie capacité à apprendre vite et à s’adapter ce qui est plutôt important pour son avenir. Elle est à l’écoute et c’est quelqu’un avec qui on a plaisir à collaborer, que ce soit sur un projet ou dans une discussion plus large. 
+      </div>
+    </div>
+
+    <!-- section contact -->
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <br />
+      <div class="card">
+        <p class="text" data-key="contact">
+          Vous avez un projet en tête ou vous souhaitez simplement discuter ?
+          N'hésitez pas à me contacter !
         </p>
-    </div>
-    </div>
-</section>
+      </div>
 
-<!-- section contact -->
-
-<section class="contact" id="contact">
-    <h2>Contact</h2>
-    <br />
-    <div class="card">
-    <p class="text" data-key="contact">
-        Vous avez un projet en tête ou vous souhaitez simplement discuter ? N'hésitez pas à me contacter !
-    </p>
-    </div>
-
-    <div class="container">
+      <div class="container">
         <div class="contact-info">
           <div class="contact-item">
             <h3>Email</h3>
-            <p><a href="mailto:contact@votremail.com">clara.moubarak75@gmail.com</a></p>
+            <p>
+              <a href="mailto:contact@votremail.com"
+                >clara.moubarak75@gmail.com</a
+              >
+            </p>
           </div>
           <div class="contact-item">
             <h3>Téléphone</h3>
@@ -416,20 +467,30 @@
           <div class="contact-item">
             <h3 data-key="follow">Suivez-moi</h3>
             <ul class="social-links">
-              <li><a href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/" target="_blank">LinkedIn</a></li>
-              <li><a href="https://github.com/llclarall/" target="_blank">GitHub</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/clara-moubarak-9b4b4118b/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/llclarall/" target="_blank"
+                  >GitHub</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
-</section>
+    </section>
 
-<footer>
-    <p>© 2025 Clara Moubarak</p>
-</footer>
+    <footer>
+      <p>© 2025 Clara Moubarak</p>
+    </footer>
 
-<script src="lang.js"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="lang.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
