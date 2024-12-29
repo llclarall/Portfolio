@@ -49,7 +49,6 @@ section {
     padding: 5rem 13vw;
 }
 
-
 body {
     background-color: var(--beige);
     padding: 0;
@@ -1265,3 +1264,70 @@ to {
 }
    */
 
+
+
+/* Loader */
+
+.loader-container {
+    position: fixed;  /* Utilisation de fixed pour que le loader couvre toute la fenêtre */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    animation: slideUp 1s ease-out forwards;
+}
+
+.layer:nth-child(1) {
+    background-color: var(--warm-brown);
+    animation-delay: .9s;
+    z-index: 1;  /* Assurez-vous que cette couche se place derrière les autres */
+}
+
+.layer:nth-child(2) {
+    background-color: var(--light-brown);
+    animation-delay: 0.85s;
+    z-index: 2;
+}
+
+.layer:nth-child(3) {
+    background-color: var(--dark-brown);
+    animation-delay: 0.7s;
+    z-index: 3;
+}
+
+.layer:nth-child(4) {
+    background-color: var(--beige);
+    animation-delay: 0.65s;
+    z-index: 4;
+}
+
+.layer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    animation: pulse 2s ease-out alternate;
+}
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);  /* Commence au bas de l'écran */
+    }
+    100% {
+        transform: translateY(-100%);  /* Se déplace vers le haut jusqu'à disparaître */
+    }
+}
