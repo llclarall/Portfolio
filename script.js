@@ -309,15 +309,13 @@ prevBtn.addEventListener('mouseleave', () => {
   previewContainer.style.display = 'none';
 });
 
-// Charger la langue préférée au démarrage
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLanguage") || "fr";
+const savedLang = localStorage.getItem("preferredLanguage") || "fr";
   changeLanguage(savedLang);
 });
 
 
 
-});
+  
 
 
 
@@ -361,6 +359,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+/* MODE SOMBRE */
+
 document.addEventListener("DOMContentLoaded", function() {
   const darkModeButton = document.getElementById('toggle-dark-mode');
   const modeIcon = document.getElementById('mode-icon');
@@ -394,7 +394,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Cacher loader une fois fini
+// LOADER
+
 const loaderContainer = document.querySelector('.loader-container');
 
 loaderContainer.addEventListener('animationend', () => {

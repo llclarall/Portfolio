@@ -10,6 +10,7 @@
     --brown: #d9a86c;
     --light-brown: #d9b68b;
     --dark-brown: #734022;
+    --very-dark-brown: #492b1a;
 }
 
 @font-face {
@@ -53,6 +54,7 @@ body {
     background-color: var(--beige);
     padding: 0;
     margin: 0;
+    color: var(--dark-brown);
     overflow-x: hidden;
     background-image: url('dessins/lumiere.png');
     background-repeat: no-repeat;
@@ -61,9 +63,10 @@ body {
 }
 
 body.dark-mode {
-    background-color: var(--dark-brown);
+    background-color: var(--very-dark-brown);
     color: var(--beige);
 }
+
 
 
 /* page d'accueil */
@@ -207,7 +210,6 @@ body.dark-mode {
 
 .about_me span {
     font-size: smaller;
-    color: var(--dark-brown);
 }
 
 .about_me .skills_crea {
@@ -305,7 +307,6 @@ body.dark-mode {
 h2 {
     font-family: titre;
     text-transform: uppercase;
-    color: var(--dark-brown);
     font-size: 4rem;
     margin: 0;
 }
@@ -346,7 +347,6 @@ h2 {
 h3 {
     font-family: titre;
     text-transform: uppercase;
-    color: var(--dark-brown);
     font-size: 2rem;
     margin: 0;
 }
@@ -585,7 +585,6 @@ h3 {
 }
 
 .temoignages .card p {
-    color: var(--dark-brown);
     margin: 0;
     padding: 0;
     max-width: 300px;
@@ -609,7 +608,6 @@ h3 {
 
 .auteur span {
     font-size: 1rem;
-    color: var(--dark-brown);
 }
 
 @media (width<=800px) {
@@ -1109,7 +1107,6 @@ footer p {
     font-size: 1rem;
     margin: 0;
     padding: .2rem;
-    color: var(--dark-brown);
 }
 
 
