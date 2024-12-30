@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: "shading";
-    src: url(polices/Hendangan.ttf);
+    src: url(polices/NIGHTBURN.otf);
 }
 
 @font-face {
@@ -142,18 +142,40 @@ body.dark-mode .home h1 {
     color: var(--warm-brown);
 }
  
-.home p {
+.home h2 {
     font-family: shading;
-    font-size: 3rem;
+    font-size: 4.5rem;
     z-index: 2;
     color: black;
     text-align: center;
     margin-top: 50px;
     color: var(--dark-brown);
+    text-transform: none;
 }
 
-body.dark-mode .home p {
+body.dark-mode .home h2 {
     color: var(--very-dark-brown);
+}
+
+.home .dessins {
+    position: absolute;
+    text-align: right;
+    bottom: 20px;
+    right: 30px;
+    width: 25%;
+    z-index: 0;
+    color: var(--dark-brown);
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .home .dessins {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 115px;
+        width: 40%;
+        text-align: center;
+    }
 }
 
 /* .cta {
@@ -842,7 +864,17 @@ transform: rotate(360deg);
     }
 }
 
-  
+@media (max-width: 500px) {
+    .side-nav {
+        display: none;
+    }
+    .home .dessins {
+        bottom: 30px;
+        right: 130px;
+        text-align: right;
+        width: 40%;
+    }
+}
   
 .sr-only {
 border: 0 !important;
@@ -1274,6 +1306,9 @@ margin: 5px 0;
     .contact-item {
       width: 45%;
     }
+    .home h2 {
+      font-size: 4rem;
+    }
   }
   
   @media (max-width: 580px) {
@@ -1282,6 +1317,9 @@ margin: 5px 0;
     }
     .home h1 {
       font-size: 3.5rem;
+    }
+    .home h2 {
+      font-size: 3rem;
     }
   }
 
