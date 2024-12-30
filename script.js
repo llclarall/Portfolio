@@ -230,7 +230,7 @@ function changeLanguage(lang) {
     }
   });
 
-  document.title = translations[lang]?.title || "Portfolio";
+  document.title = translations[lang]?.title || "Clara Moubarak | Portfolio";
   loadProjectsForLang(lang); // Recharger les projets si nécessaire
 }
 

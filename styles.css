@@ -1031,6 +1031,9 @@ body.dark-mode .hidden-thingy {
     color: var(--beige);
 }
 
+.responsive {
+    font-size: 4vw;
+}
 
 
 /* pop up projets */
@@ -1224,6 +1227,38 @@ margin-bottom: 30px;
         font-size: 3.5rem;
         top: -20px;
         right: 15px;
+    }
+}
+
+@media (width<=400px) {
+    .modal-content {
+        width: 90%;
+    }
+    .modal-image {
+        height: 100px;
+    }
+    .modal-title {
+        font-size: 1.2rem;
+    }
+    .modal-description {
+        font-size: .9rem;
+    }
+    .modal-group, .modal-context, .modal-type {
+        font-size: .7rem;
+    }
+    .modal-details {
+        font-size: .8rem;
+    }
+    .modal-link {
+        font-size: .8rem;
+    }
+    .modal-navigation button {
+        padding: 6px;
+    }
+    .close {
+        font-size: 3rem;
+        top: -15px;
+        right: 10px;
     }
 }
 
