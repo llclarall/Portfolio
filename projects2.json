@@ -92,7 +92,7 @@
         {
             "id": 2,
             "title": "Hommade Hommous",
-            "description": "Hommade Hommous is a reservation website created in the first year of studies for fictional Lebanese cooking workshops, promoting meetings between participants. In addition to HTML, CSS and JavaScript, I used PHP and MySQL to manage the database. The site integrates a filter and a search bar in PHP, a sort in JavaScript, and sends a confirmation email for each reservation.",
+            "description": "Hommade Hommous is a reservation website created in my first year of studies for fictional Lebanese cooking workshops, promoting meetings between participants. In addition to HTML, CSS and JavaScript, I used PHP and MySQL to manage the database. The site integrates a filter and a search bar in PHP, a sort in JavaScript, and sends a confirmation email for each reservation.",
             "details": [
                 "<strong>Technologies</strong> : PHP, MySQL, HTML, CSS <br> <br>",
                 "<strong>Date</strong> : May 2024 <br> <br>" 
@@ -135,7 +135,7 @@
         {
             "id": 5,
             "title": "Less is more",
-            "description": "During an English class, I made a presentation in the form of a Ted Talk on a topic of my choice. I chose to talk about the importance of small things to make us happier, based on the example of the book The Girl on the Train. I explored how simple moments, like reading, can bring comfort to everyday life.",
+            "description": "During an English class, I made a presentation in the form of a Ted Talk on a topic of my choice. I chose to talk about the importance of small everyday things to make us happier, based on the example of the book The Girl on the Train. I explored how simple moments, like reading, can bring comfort to everyday life.",
             "details": [
                 "<strong>Language</strong> : English <br> <br>",
                 "<strong>Date</strong> : October 2023"

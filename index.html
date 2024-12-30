@@ -17,19 +17,21 @@
       rel="stylesheet"
     />
   </head>
-
-  <!-- Loader -->
-  <div class="loader-container">
-	  <div class="layer"></div>
-	  <div class="layer"></div>
-	  <div class="layer"></div>
-	  <div class="layer"></div>
-	  <div class="layer">
-		  <img src="dessins/fleur.png" alt="">
-	  </div>
-  </div>
 	
   <body class="dosis content">
+    
+      <!-- Loader -->
+      <div class="loader-container">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer">
+          <img src="dessins/fleur.png" alt="">
+        </div>
+      </div>
+
     <a href="#about_me" class="skip">Aller au contenu</a>
     <!-- <a class="cta btn" href="contact.html">Let's work together!</a> -->
 
@@ -59,6 +61,7 @@
 				</div>
 			</div>
 		</header>
+    
 		
 		<nav class="side-nav">
       <a href="#about_me" class="nav-icon" title="Profil">
@@ -74,29 +77,19 @@
 	
 	<!-- page d'accueil -->
 	<section class="home">
-		<div class="text">
-			<img src="dessins/champy.png" alt="" class="champy">
+  <div class="particles-container"></div>
+    <div class="text">
+      <img src="dessins/champy.png" alt="" class="champy fade-in-left-home">
 			<h1 id="moving-title">
-				<span>Clara</span><br />
+        <span>Clara</span><br/>
 				<span>Moubarak</span>
 			</h1>
 			<!-- <img src="dessins/creative_developer.png" alt="" /> -->
-			<p>Creative developer</p>
-      </div>
+			<p class="fade-in-right-home">Creative developer</p>
+    </div>
+    
+  </section>
 
-      <!-- 
-<div class="liste">
-<hr>
-<nav class="qualifs">
-    <a href="#about_me">About me</a>
-    <a href="#projets">Works</a>
-    <span class="dev"><img src="dessins/fleur.png" alt="" width="50px"></span>
-    <a href="">Testimonies</a>
-    <a href="#contact">Contact</a>
-</nav>
-<hr>
-</div> -->
-    </section>
 
     <!-- section about me -->
 
@@ -104,7 +97,7 @@
       <h2 data-key="about">à propos</h2>
       <br />
       <div class="card">
-        <img class="pdp" src="images/photo identité.png" alt="" />
+        <img class="pdp fade-in-left" src="images/photo identité.png" alt="" />
         <p class="text" data-key="intro">
           Salut ! Je m'appelle Clara, je suis étudiante en développement web
           basée à Paris. Je suis passionnée par la création de sites web beaux
@@ -142,7 +135,7 @@
 
       <h3>Skills</h3>
 
-      <div class="skills">
+      <div class="skills fade-in-right">
         <div class="skills_dev">
           <div class="skill">
             <img class="logo_skills" src="images/html_css.png" alt="" />
@@ -181,7 +174,7 @@
         </div>
       </div>
 
-      <div class="mb">
+      <div class="mb fade-in-left">
         <h3 data-key="analogie">Si j'étais un site...</h3>
 
         <div class="moodboard">
@@ -247,7 +240,7 @@
 
     <!-- section projets -->
 
-    <section class="projets" id="projets">
+    <section class="projets fade-in-right" id="projets">
       <h2 data-key="projets">Projets</h2>
       <br /><br />
 
@@ -345,7 +338,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <h2 class="modal-title"></h2>
+          <h2 class="modal-title">::</h2>
           <div class="modal-things">
             <span class="modal-type"></span>
             <span class="modal-group"></span>
@@ -373,7 +366,7 @@
     </div>
 
     <section class="opquast">
-      <div class="container">
+      <div class="container fade-in-right">
         <h3>Opquast</h3>
         <p class="text" data-key="opquast">
           Je suis formée aux règles Opquast, qui concernent les bonnes pratiques
@@ -398,7 +391,7 @@
 
     <!-- section témoignages -->
 
-    <div class="temoignages" id="temoignages">
+    <div class="temoignages fade-in-left" id="temoignages">
       <h2 data-key="temoignages">Avis</h2>
       <div class="card_container">
         <div class="card">
@@ -446,7 +439,7 @@
 
     <!-- section contact -->
 
-    <section class="contact" id="contact">
+    <section class="contact fade-in-right" id="contact">
       <h2>Contact</h2>
       <br />
       <div class="card">
@@ -498,7 +491,6 @@
     </footer>
 
     <script src="lang.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

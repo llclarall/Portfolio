@@ -4,34 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const title = document.getElementById('moving-title');
 
-// Écoute l'événement de mouvement de la souris
-document.addEventListener('mousemove', (event) => {
-    // Obtiens la largeur et la hauteur de la fenêtre
-    const { innerWidth, innerHeight } = window;
+// Délai pour synchroniser avec la fin de l'animation fade-in
+setTimeout(() => {
+    // Ajoute une classe pour indiquer que l'effet de rotation peut commencer
+    title.classList.add('moving');
 
-    // Obtiens les coordonnées de la souris
-    const x = event.clientX;
-    const y = event.clientY;
+    // Écoute les mouvements de la souris
+    document.addEventListener('mousemove', (event) => {
+        const { innerWidth, innerHeight } = window;
+        const x = event.clientX;
+        const y = event.clientY;
+        const centerX = innerWidth / 2;
+        const centerY = innerHeight / 2;
 
-    // Calcule les coordonnées du centre de la fenêtre
-    const centerX = innerWidth / 2;
-    const centerY = innerHeight / 2;
+        // Calcul de l'inclinaison
+        const maxTilt = 15;
+        const deltaX = x - centerX;
+        const deltaY = y - centerY;
+        const tiltX = (deltaY / (innerHeight / 2)) * maxTilt;
+        const tiltY = (deltaX / (innerWidth / 2)) * maxTilt;
 
-    // Calcule l'angle d'inclinaison en fonction des coordonnées de la souris
-    const deltaX = x - centerX;
-    const deltaY = y - centerY;
-
-    // Inclinaison maximale en degrés
-    const maxTilt = 15; 
-
-    // Calcule les inclinaisons sur les axes X et Y
-    const tiltX = (deltaY / (innerHeight / 2)) * maxTilt;
-    const tiltY = (deltaX / (innerWidth / 2)) * maxTilt; 
-
-    // Applique uniquement la rotation au titre
-    title.style.transform = `rotateX(${-tiltX}deg) rotateY(${tiltY}deg)`;
-});
-
+        // Applique les transformations
+        title.style.transform = `rotateX(${-tiltX}deg) rotateY(${tiltY}deg)`;
+    });
+}, 3000); // Correspond à la durée de l'animation fade-in
 
 
 
@@ -280,10 +276,10 @@ function updatePreview(index, direction) {
 
   // Positionner la prévisualisation en fonction du bouton hover
   if (direction === "next") {
-    previewContainer.style.left = (nextBtn.offsetLeft + nextBtn.offsetWidth - 263) + 'px';
+    previewContainer.style.left = (nextBtn.offsetLeft + nextBtn.offsetWidth - 245) + 'px';
     previewContainer.style.top = nextBtn.offsetTop + 'px'; // Aligner avec le bouton sur l'axe vertical
   } else if (direction === "prev") {
-    previewContainer.style.left = (prevBtn.offsetLeft - previewContainer.offsetWidth + 127) + 'px';
+    previewContainer.style.left = (prevBtn.offsetLeft - previewContainer.offsetWidth + 110) + 'px';
     previewContainer.style.top = prevBtn.offsetTop + 'px'; // Aligner avec le bouton sur l'axe vertical
   }
 
@@ -292,7 +288,7 @@ function updatePreview(index, direction) {
 
 // Mettre à jour la prévisualisation lors du survol des boutons
 nextBtn.addEventListener('mouseenter', () => {
-  const nextIndex = getNextIndex(currentProjectIndex, "next", projects.length);
+  const nextIndex = getNextIndex(currentProjectIndex, "next", projects.length);         
   updatePreview(nextIndex, "next");
 });
 
@@ -407,4 +403,79 @@ loaderContainer.addEventListener('animationend', () => {
     setTimeout(() => {
         loaderContainer.style.display = 'none'; 
     }, 500); 
+});
+
+
+
+
+
+// Sélectionne tous les éléments qui doivent s'animer (droite ou gauche)
+const fadeInElements = document.querySelectorAll('.fade-in-right, .fade-in-left');
+
+// Fonction pour observer les éléments
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Arrête d'observer l'élément après l'animation
+        }
+    });
+}, {
+    threshold: 0.2, // L'élément doit être à 20% visible pour déclencher l'animation
+});
+
+// Observe chaque élément sélectionné
+fadeInElements.forEach(element => observer.observe(element));
+
+
+
+
+
+// PARTICULES ACCUEIL
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector('.particles-container');
+  const numParticles = 100; // Nombre de particules
+
+  function getWindowSize() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+  const { width, height } = getWindowSize();
+
+  // Fonction pour générer une particule
+  function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    // Position aléatoire initiale
+    const initialX = Math.random() * width;
+    const initialY = Math.random() * height;
+
+    // Mouvement aléatoire
+    const moveX = (Math.random() - 0.5) * 200; 
+    const moveY = (Math.random() - 0.5) * 200; 
+
+    // Appliquer les styles de mouvement
+    particle.style.left = `${initialX}px`;
+    particle.style.top = `${initialY}px`;
+    particle.style.setProperty('--move-x', `${moveX}px`);
+    particle.style.setProperty('--move-y', `${moveY}px`);
+
+    container.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 3000); 
+  }
+
+  setInterval(createParticle, 200); 
+
+  // Réajuster les tailles lorsque la fenêtre est redimensionnée
+  window.addEventListener('resize', () => {
+    const { width, height } = getWindowSize();
+  });
 });
