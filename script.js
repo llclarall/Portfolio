@@ -519,3 +519,56 @@ document.addEventListener("DOMContentLoaded", () => {
     const { width, height } = getWindowSize();
   });
 });
+
+
+
+
+
+// Fonction pour ajouter la classe 'active' à l'élément de navigation correspondant
+function setActiveLink() {
+  const sections = document.querySelectorAll('.section');
+  const links = document.querySelectorAll('.side-nav .nav-icon');
+  const offset = 80; // Décalage pour compenser un header fixe ou autre espacement
+
+  let index = -1;
+  sections.forEach((section, i) => {
+    const rect = section.getBoundingClientRect();
+    // Vérifie si la section est dans la vue de l'utilisateur, en prenant en compte l'offset
+    if (rect.top <= window.innerHeight / 2 + offset && rect.bottom >= window.innerHeight / 2 + offset) {
+      index = i;
+    }
+  });
+
+  links.forEach((link, i) => {
+    if (i === index) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+// Gestion du clic sur les liens
+document.querySelectorAll('.side-nav .nav-icon').forEach(link => {
+  link.addEventListener('click', function(e) {
+    // Empêche le comportement par défaut du lien
+    e.preventDefault();
+
+    // Scroll jusqu'à la section
+    const targetId = this.getAttribute('href').substring(1);  // Récupère l'ID sans '#'
+    const targetSection = document.getElementById(targetId);
+    window.scrollTo({
+      top: targetSection.offsetTop - 80, // Ajuste pour le décalage de l'offset
+      behavior: 'smooth',
+    });
+
+    // Déclenche également le changement de classe 'active'
+    setActiveLink();
+  });
+});
+
+// Détection du scroll pour gérer la classe active
+window.addEventListener('scroll', setActiveLink);
+
+// Initialisation pour la page qui charge
+setActiveLink();

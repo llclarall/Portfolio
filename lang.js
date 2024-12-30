@@ -2,7 +2,7 @@
 const translations = {
 fr: {
     about: "à propos",
-    intro: "Salut ! Je m'appelle Clara, je suis étudiante en développement web basée à Paris. Je suis passionnée par la création de sites web beaux et fonctionnels. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et dévelpper mes compétences. Je suis actuellement à la recherche d'un stage en tant que développeuse front-end. N'hésitez pas à me contacter si vous souhaitez collaborer!",
+    intro: "Salut ! Je m'appelle Clara, je suis étudiante en développement web basée à Paris. Je suis passionnée par la création de sites web beaux et fonctionnels. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et développer mes compétences. Je suis actuellement à la recherche d'un stage en tant que développeuse front-end. N'hésitez pas à me contacter si vous souhaitez collaborer!",
     cv: "Mon CV",
     analogie: "Si j'étais un site...",
     responsive: "...je serais responsive :)",
