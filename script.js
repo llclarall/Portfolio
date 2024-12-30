@@ -92,6 +92,7 @@ items.forEach(item => {
     let offsetX = 0;
     let offsetY = 0;
 
+    // Gestion du déplacement avec la souris (pour les ordinateurs)
     item.addEventListener('mousedown', (e) => {
         offsetX = e.clientX - item.getBoundingClientRect().left;
         offsetY = e.clientY - item.getBoundingClientRect().top;
@@ -122,6 +123,44 @@ items.forEach(item => {
         document.addEventListener('mousemove', moveItem);
         document.addEventListener('mouseup', stopMove);
     });
+
+    // Gestion du déplacement avec le toucher (pour les téléphones)
+    item.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        offsetX = touch.clientX - item.getBoundingClientRect().left;
+        offsetY = touch.clientY - item.getBoundingClientRect().top;
+
+        item.style.zIndex = currentZIndex; // Mettre l'item au-dessus des autres
+
+        const moveItem = (eMove) => {
+            const touch = eMove.touches[0];
+            const boardRect = moodboard.getBoundingClientRect();
+
+            let newX = touch.clientX - offsetX - boardRect.left;
+            let newY = touch.clientY - offsetY - boardRect.top;
+
+            // Garder les items dans les limites du moodboard
+            newX = Math.max(0, Math.min(newX, boardRect.width - item.offsetWidth));
+            newY = Math.max(0, Math.min(newY, boardRect.height - item.offsetHeight));
+
+            item.style.left = `${newX}px`;
+            item.style.top = `${newY}px`;
+
+            // Empêcher le défilement de la page lors du mouvement tactile
+            eMove.preventDefault();
+        };
+
+        const stopMove = () => {
+            document.removeEventListener('touchmove', moveItem);
+            document.removeEventListener('touchend', stopMove);
+
+            currentZIndex++; 
+        };
+
+        // Ajouter l'option passive: false pour permettre preventDefault
+        document.addEventListener('touchmove', moveItem, { passive: false });
+        document.addEventListener('touchend', stopMove);
+    });
 });
 
 resetButton.addEventListener('click', resetItemsToRelativePositions);
@@ -130,6 +169,7 @@ resetButton.addEventListener('click', resetItemsToRelativePositions);
 window.addEventListener('resize', () => {
     resetItemsToRelativePositions();
 });
+
 
 
 
