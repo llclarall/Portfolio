@@ -1022,19 +1022,30 @@ body.dark-mode .reset-button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: "titre", sans-serif;
     color: var(--warm-brown);
+    text-align: center;
 }
 
 body.dark-mode .hidden-thingy {
     color: var(--beige);
 }
 
-.responsive {
-    font-size: 4vw;
+@media (max-width: 950px) {
+    .hidden-thingy {
+        font-size: 2rem;
+    }
 }
 
+@media (max-width: 650px) {
+    .moodboard {
+        height: 60vh;
+    }
+    .about_me {
+        padding-bottom: 0;
+    }
+}
 
 /* pop up projets */
 
