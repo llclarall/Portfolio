@@ -264,7 +264,7 @@ function showProjectModal(index) {
   modalGroup.textContent = project.group;
   modalType.textContent = project.type;
   modalImage.src = project.image;
-  modalDescription.textContent = project.description;
+  modalDescription.innerHTML = project.description;
   modalDetails.innerHTML = project.details.map(detail => `<li>${detail}</li>`).join('');
   modalLink.href = project.link;
 

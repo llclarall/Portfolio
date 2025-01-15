@@ -591,8 +591,8 @@ body.dark-mode .work:hover {
 }
 
 .projets .anglais {
-    background-image: url('images/anglais.jpg');
-    height: 180px; 
+    background-image: url('images/ent.png');
+    height: 150px; 
 }
 
 .projets .cv-video {
@@ -1241,7 +1241,7 @@ margin-bottom: 30px;
     }
 }
 
-@media (width<=400px) {
+@media (width<=550px) {
     .modal-content {
         width: 90%;
     }

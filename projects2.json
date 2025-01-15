@@ -60,17 +60,17 @@
         },
         {
             "id": 5,
-            "title": "Less is more",
-            "description": "Lors d’un cours d’anglais, j’ai réalisé une présentation sous forme de Ted Talk sur un sujet de mon choix. J’ai choisi de parler de l’importance des petites choses pour nous rendre plus heureux, en m’appuyant sur l’exemple du livre The Girl on the Train. J’y ai exploré comment des moments simples, comme la lecture, peuvent apporter du réconfort au quotidien.",
+            "title": "ENT",
+            "description": "Pour ce projet, nous devions repenser notre ENT pour le rendre plus fonctionnel et plus agréable à utiliser. J'ai principalement travaillé sur le développement du site, en particulier la partie back-end de l'ENT, en suivant les maquettes réalisées par les membres de mon groupe. J'ai utilisé PHP et MySQL pour gérer la base de données et j'ai intégré un bon nombre de fonctionnalités, côté étudiant comme côté back-office, telles qu'un système de messagerie, de gestion des notes et des absences, un emploi du temps fonctionnel en temps réel, une zone de dépôt pour les rendus, etc. <br><br><strong>Identifiant étudiant</strong> : clara.moubarak  <br><strong>Mot de passe</strong> : clara <br><br> <strong>Identifiant admin</strong> : isabelle.rouas  <br><strong>Mot de passe</strong> : isabelle",
             "details": [
-                "<strong>Langue</strong> : Anglais <br> <br>",
-                "<strong>Date</strong> : Octobre 2023"
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : Janvier 2025"
             ],
-            "link": "https://docs.google.com/document/d/e/2PACX-1vR2B_YOKnQYAF2JY4BEP2t3Luh-cg8YsD-LGiMx7YlXvvx45kvusu0EbfgBS471VsZCNKZxdTleYeqA/pub",
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
             "context": "Projet universitaire",
-            "group": "Seule",
-            "type": "Ted Talk",
-            "image": "images/anglais.jpg"
+            "group": "En groupe",
+            "type": "Développement front et back-end",
+            "image": "images/ent.png"
         }
     ],
     "en": [
@@ -134,17 +134,17 @@
         },
         {
             "id": 5,
-            "title": "Less is more",
-            "description": "During an English class, I made a presentation in the form of a Ted Talk on a topic of my choice. I chose to talk about the importance of small everyday things to make us happier, based on the example of the book The Girl on the Train. I explored how simple moments, like reading, can bring comfort to everyday life.",
+            "title": "ENT",
+            "description": "For this project, we had to rethink our ENT to make it more functional and enjoyable to use. I mainly worked on the development of the site, especially the back-end part of the ENT, following the mockups made by the members of my group. I used PHP and MySQL to manage the database and integrated a good number of features, student side as well as back-office side, such as a messaging system, grade and absence management, a functional real-time timetable, a deposit area for submissions, etc. <br><br><strong>Student ID</strong> : clara.moubarak  <br><strong>Password</strong> : clara <br><br> <strong>Admin ID</strong> : isabelle.rouas  <br><strong>Password</strong> : isabelle",
             "details": [
-                "<strong>Language</strong> : English <br> <br>",
-                "<strong>Date</strong> : October 2023"
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : January 2024"
             ],
-            "link": "https://docs.google.com/document/d/e/2PACX-1vR2B_YOKnQYAF2JY4BEP2t3Luh-cg8YsD-LGiMx7YlXvvx45kvusu0EbfgBS471VsZCNKZxdTleYeqA/pub",
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
             "context": "Academic project",
-            "group": "Alone",
-            "type": "Ted Talk",
-            "image": "images/anglais.jpg"
+            "group": "In group",
+            "type": "Front and back-end development",
+            "image": "images/ent.png"
         }
     ]
 }
