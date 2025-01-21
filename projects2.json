@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Moviz",
-            "description": "Moviz est un site de data visualisation dédié à l’analyse des films sortis au cinéma. Il propose des graphiques dynamiques, des animations interactives et des éléments multimédias pour illustrer les tendances du cinéma au fil du temps. Je me suis occupée du dévelopement intégral, notamment des graphiques intéractifs, du site en suivant les maquettes réalisées par les membres de mon groupe.",
+            "description": "Moviz est un site de data visualisation dédié à l’analyse des films sortis au cinéma. Il propose des graphiques dynamiques, des animations interactives et des éléments multimédias pour illustrer les tendances du cinéma au fil du temps. Je me suis occupée du développement intégral, notamment des graphiques intéractifs, du site en suivant les maquettes réalisées par les membres de mon groupe.",
             "details": [
                 "<strong>Technologies</strong> : Javascript, HTML, CSS <br> <br>",
                 "<strong>Bibliothèques</strong> : D3.js, ChartJS <br> <br>" ,
