@@ -570,13 +570,13 @@ body.dark-mode .work:hover {
 
 .projets .hh {
     background-image: url('images/hh2.png');
-    height: 320px;
+    height: 315px;
 }
 
 .projets .baron {
     height: 200px;
     background-image: url('images/baron.png');
-    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .projets .wp {
@@ -590,9 +590,10 @@ body.dark-mode .work:hover {
     margin-top: auto;
 }
 
-.projets .anglais {
+.projets .ent {
     background-image: url('images/ent.png');
-    height: 150px; 
+    height: 200px; 
+    margin-top: auto;
 }
 
 .projets .cv-video {
