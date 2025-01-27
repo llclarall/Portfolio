@@ -1556,12 +1556,12 @@ body.dark-mode #toggle-dark-mode:hover {
 .layer:nth-child(1) {
     background-color: var(--light-brown);
     animation-delay: 1s;
-    z-index: 1;  /* Assurez-vous que cette couche se place derrière les autres */
+    z-index: 1;
 }
 
 .layer:nth-child(2) {
     background-color: var(--dark-brown);
-    animation-delay: .96s;
+    animation-delay: .94s;
     z-index: 2;
 }
 
@@ -1573,13 +1573,13 @@ body.dark-mode #toggle-dark-mode:hover {
 
 .layer:nth-child(4) {
     background-color: var(--warm-brown);
-    animation-delay: 0.78s;
+    animation-delay: 0.75s;
     z-index: 4;
 }
 
 .layer:nth-child(5) {
     background-color: var(--very-dark-brown);
-    animation-delay: 0.75s;
+    animation-delay: 0.67s;
     z-index: 5;
 }
 
