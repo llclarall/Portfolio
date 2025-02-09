@@ -2,6 +2,20 @@
     "fr": [
         {
             "id": 1,
+            "title": "ENT",
+            "description": "Pour ce projet, nous devions repenser notre ENT pour le rendre plus fonctionnel et plus agréable à utiliser. J'ai principalement travaillé sur le développement du site, en particulier la partie back-end de l'ENT, en suivant les maquettes réalisées par les membres de mon groupe. J'ai utilisé PHP et MySQL pour gérer la base de données et j'ai intégré un bon nombre de fonctionnalités, côté étudiant comme côté back-office, telles qu'un système de messagerie, de gestion des notes et des absences, un emploi du temps fonctionnel en temps réel, une zone de dépôt pour les rendus, etc. <br><br><strong>Identifiant étudiant</strong> : clara.moubarak  <br><strong>Mot de passe</strong> : clara <br><br> <strong>Identifiant admin</strong> : isabelle.rouas  <br><strong>Mot de passe</strong> : isabelle",
+            "details": [
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : Janvier 2025"
+            ],
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
+            "context": "Projet universitaire",
+            "group": "En groupe",
+            "type": "Développement front et back-end",
+            "image": "images/ent.png"
+        },
+        {
+            "id": 2,
             "title": "Moviz",
             "description": "Moviz est un site de data visualisation dédié à l’analyse des films sortis au cinéma. Il propose des graphiques dynamiques, des animations interactives et des éléments multimédias pour illustrer les tendances du cinéma au fil du temps. Je me suis occupée du développement intégral, notamment des graphiques intéractifs, du site en suivant les maquettes réalisées par les membres de mon groupe.",
             "details": [
@@ -16,7 +30,7 @@
             "image": "images/moviz.png"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Hommade Hommous",
             "description": "Hommade Hommous est un site de réservation réalisé en 1ère année d'études pour des ateliers de cuisine libanaise fictifs, favorisant les rencontres entre les participants. En plus de l'HTML, CSS et JavaScript, j'ai utilisé PHP et MySQL pour gérer la base de données. Le site intègre un filtre et une barre de recherche en PHP, un tri en JavaScript, et envoie un mail de confirmation pour chaque réservation.",
             "details": [
@@ -30,7 +44,7 @@
             "image": "images/hh.png"
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "Montage vidéo",
             "description": "Dans le cadre d’un projet universitaire, nous avons organisé et tourné une interview avec le photographe Ludovic Baron dans une salle privée de la Samaritaine, que nous avions préalablement sollicitée. Une fois le tournage terminé, chacun devait monter l’interview individuellement, en y intégrant un sous-titrage en anglais. Ce projet a marqué ma première expérience professionnelle dans des conditions réelles du monde du travail.",
             "details": [
@@ -45,7 +59,7 @@
             "image": "images/baron.png"
         },
         {
-            "id": 4,
+            "id": 5,
             "title": "Blog Wordpress",
             "description": "Pour ce projet, nous devions réalisé un blog Wordpress pour l'artiste de notre choix, dans mon cas Charlotte Sands. Ce projet m’a permis d’approfondir mes compétences en CMS, en design web et en gestion de contenu.",
             "details": [
@@ -57,25 +71,25 @@
             "group": "Seule",
             "type": "CMS (Content Management System)",
             "image": "images/wp.png"
-        },
-        {
-            "id": 5,
-            "title": "ENT",
-            "description": "Pour ce projet, nous devions repenser notre ENT pour le rendre plus fonctionnel et plus agréable à utiliser. J'ai principalement travaillé sur le développement du site, en particulier la partie back-end de l'ENT, en suivant les maquettes réalisées par les membres de mon groupe. J'ai utilisé PHP et MySQL pour gérer la base de données et j'ai intégré un bon nombre de fonctionnalités, côté étudiant comme côté back-office, telles qu'un système de messagerie, de gestion des notes et des absences, un emploi du temps fonctionnel en temps réel, une zone de dépôt pour les rendus, etc. <br><br><strong>Identifiant étudiant</strong> : clara.moubarak  <br><strong>Mot de passe</strong> : clara <br><br> <strong>Identifiant admin</strong> : isabelle.rouas  <br><strong>Mot de passe</strong> : isabelle",
-            "details": [
-                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
-                "<strong>Date</strong> : Janvier 2025"
-            ],
-            "link": "https://ent.moubarak.butmmi.o2switch.site",
-            "context": "Projet universitaire",
-            "group": "En groupe",
-            "type": "Développement front et back-end",
-            "image": "images/ent.png"
-        }
+        }        
     ],
     "en": [
         {
             "id": 1,
+            "title": "ENT",
+            "description": "For this project, we had to rethink our ENT to make it more functional and enjoyable to use. I mainly worked on the development of the site, especially the back-end part of the ENT, following the mockups made by the members of my group. I used PHP and MySQL to manage the database and integrated a good number of features, student side as well as back-office side, such as a messaging system, grade and absence management, a functional real-time timetable, a deposit area for submissions, etc. <br><br><strong>Student ID</strong> : clara.moubarak  <br><strong>Password</strong> : clara <br><br> <strong>Admin ID</strong> : isabelle.rouas  <br><strong>Password</strong> : isabelle",
+            "details": [
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : January 2024"
+            ],
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
+            "context": "Academic project",
+            "group": "In group",
+            "type": "Front and back-end development",
+            "image": "images/ent.png"
+        },
+        {
+            "id": 2,
             "title": "Moviz",
             "description": "Moviz is a data visualization website dedicated to the analysis of films released in theaters. It offers dynamic graphics, interactive animations and multimedia elements to illustrate cinema trends over time. I was in charge of developing the site, including the interactive charts, following the mockups made by the members of my group.",
             "details": [
@@ -90,7 +104,7 @@
             "image": "images/moviz.png"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Hommade Hommous",
             "description": "Hommade Hommous is a reservation website created in my first year of studies for fictional Lebanese cooking workshops, promoting meetings between participants. In addition to HTML, CSS and JavaScript, I used PHP and MySQL to manage the database. The site integrates a filter and a search bar in PHP, a sort in JavaScript, and sends a confirmation email for each reservation.",
             "details": [
@@ -104,7 +118,7 @@
             "image": "images/hh.png"
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "Video editing",
             "description": "As part of an academic project, we organized and filmed an interview with photographer Ludovic Baron in a private room at Samaritaine, which we had previously contacted. Once the shooting was over, everyone had to edit the interview individually, integrating English subtitles. This project marked my first professional experience in real working conditions.",
             "details": [
@@ -119,7 +133,7 @@
             "image": "images/baron.png"
         },
         {
-            "id": 4,
+            "id": 5,
             "title": "Wordpress blog",
             "description": "For this project, we had to create a Wordpress blog for the artist of our choice, in my case Charlotte Sands. This project allowed me to deepen my skills in CMS, web design and content management.",
             "details": [
@@ -131,20 +145,6 @@
             "group": "Alone",
             "type": "CMS (Content Management System)",
             "image": "images/wp.png"
-        },
-        {
-            "id": 5,
-            "title": "ENT",
-            "description": "For this project, we had to rethink our ENT to make it more functional and enjoyable to use. I mainly worked on the development of the site, especially the back-end part of the ENT, following the mockups made by the members of my group. I used PHP and MySQL to manage the database and integrated a good number of features, student side as well as back-office side, such as a messaging system, grade and absence management, a functional real-time timetable, a deposit area for submissions, etc. <br><br><strong>Student ID</strong> : clara.moubarak  <br><strong>Password</strong> : clara <br><br> <strong>Admin ID</strong> : isabelle.rouas  <br><strong>Password</strong> : isabelle",
-            "details": [
-                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
-                "<strong>Date</strong> : January 2024"
-            ],
-            "link": "https://ent.moubarak.butmmi.o2switch.site",
-            "context": "Academic project",
-            "group": "In group",
-            "type": "Front and back-end development",
-            "image": "images/ent.png"
         }
     ]
 }
