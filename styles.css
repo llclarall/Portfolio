@@ -322,8 +322,8 @@ body.dark-mode .about_me .text {
 }
 
 .about_me .skills_crea {
-    display: flex; 
-    gap: 1rem;
+    display: flex;
+    gap: .7rem;
     margin: 0;
 }
 
@@ -524,15 +524,15 @@ body.dark-mode .about_me .dessin {
 .projets .works {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
     margin-top: 50px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .projets .work {
-    /* height: 350px; */
+    height: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -570,35 +570,35 @@ body.dark-mode .work:hover {
 
 .projets .hh {
     background-image: url('images/hh2.png');
-    height: 315px;
+    /* height: 315px; */
 }
 
 .projets .baron {
-    height: 200px;
-    background-image: url('images/baron.png');
-    margin-bottom: auto;
+    /* height: 200px; */
+    background-image: url('images/TIM.png');
+    /* margin-bottom: auto; */
 }
 
 .projets .wp {
     background-image: url('images/wp.png');
-    height: 250px;
+    /* height: 250px; */
 }
 
 .projets .moviz {
     background-image: url('images/moviz.png');
-    height: 230px; 
-    margin-top: auto;
+    /* height: 230px;  */
+   /*  margin-top: auto; */
 }
 
 .projets .ent {
     background-image: url('images/ent.png');
-    height: 200px; 
-    margin-top: auto;
+    /* height: 200px;  */
+   /*  margin-top: auto; */
 }
 
 .projets .cv-video {
     background-image: url('images/cv-video.jpg');
-    height: 280px; 
+    /* height: 280px; */ 
 }
 
 .projets .btn_work {
@@ -1183,7 +1183,7 @@ height: 100px;
 border-radius: 8px;
 }
 
-.modal-image {
+.modal-image, .modal-image2 {
 width: fit-content;
 height: 135px;
 object-fit: cover;

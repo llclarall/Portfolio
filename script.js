@@ -186,6 +186,7 @@ const modalType = document.querySelector('.modal-type');
 const modalLink = document.querySelector('.modal-link');
 const modalGroup = document.querySelector('.modal-group');
 const modalImage = document.querySelector('.modal-image');
+const modalImage2 = document.querySelector('.modal-image2');
 const closeBtn = document.querySelector('.close');
 const nextBtn = document.querySelector('.next-project');
 const prevBtn = document.querySelector('.prev-project');
@@ -264,6 +265,13 @@ function showProjectModal(index) {
   modalGroup.textContent = project.group;
   modalType.textContent = project.type;
   modalImage.src = project.image;
+  if (project.image2) {
+    modalImage2.src = project.image2;
+    modalImage2.style.display = '';
+  } else {
+    modalImage2.src = '';
+    modalImage2.style.display = 'none';
+  }
   modalDescription.innerHTML = project.description;
   modalDetails.innerHTML = project.details.map(detail => `<li>${detail}</li>`).join('');
   modalLink.href = project.link;

@@ -1,18 +1,19 @@
 {
     "fr": [
         {
-            "id": 1,
-            "title": "ENT",
-            "description": "Pour ce projet, nous devions repenser notre ENT pour le rendre plus fonctionnel et plus agréable à utiliser. J'ai principalement travaillé sur le développement du site, en particulier la partie back-end de l'ENT, en suivant les maquettes réalisées par les membres de mon groupe. J'ai utilisé PHP et MySQL pour gérer la base de données et j'ai intégré un bon nombre de fonctionnalités, côté étudiant comme côté back-office, telles qu'un système de messagerie, de gestion des notes et des absences, un emploi du temps fonctionnel en temps réel, une zone de dépôt pour les rendus, etc. <br><br><strong>Identifiant étudiant</strong> : clara.moubarak  <br><strong>Mot de passe</strong> : clara <br><br> <strong>Identifiant admin</strong> : isabelle.rouas  <br><strong>Mot de passe</strong> : isabelle",
+            "id": 4,
+            "title": "Site TIM",
+            "description": "Dans le cadre de mon échange universitaire au Canada, j'ai réalisé un site vitrine pour le TIM (Techniques Intégration Multimédia), la formation dans laquelle j'étais au Cégep de Sainte-Foy. Ce site présente le programme, les projets étudiants avec des filtres, les débouchés professionnels, et un formulaire de contact fonctionnel. J'ai utilisé le modèle MVC,  ainsi qui JavaScript, PHP, SQL, SASS, et Blade pour le développement du site, en me basant sur les maquettes que j'ai moi-même dû créer. Mon site est arrivé 2e de la promotion, malgré mon retard sur certaines compétences par rapport aux autres étudiants. Malheureusement, je ne peux pas rendre mon site public en vue de sa nature.",
             "details": [
-                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
-                "<strong>Date</strong> : Janvier 2025"
+                "<strong>Languages</strong> : PHP, MySQL, Javascript, HTML, SCSS, Blade <br> <br>",
+                "<strong>Date</strong> : Février 2025"
             ],
-            "link": "https://ent.moubarak.butmmi.o2switch.site",
+            "link": "https://www.youtube.com/watch?v=0ndssbiE-y4",
             "context": "Projet universitaire",
-            "group": "En groupe",
-            "type": "Développement front et back-end",
-            "image": "images/ent.png"
+            "group": "Seule",
+            "type": "Conception et Développement Web",
+            "image": "images/TIM.png",
+            "image2": "images/tim2.png"
         },
         {
             "id": 2,
@@ -27,7 +28,21 @@
             "context": "Projet universitaire",
             "group": "En groupe",
             "type": "Développement front-end",
-            "image": "images/moviz.png"
+            "image": "images/moviz2.png"
+        },
+        {
+            "id": 1,
+            "title": "ENT",
+            "description": "Pour ce projet, nous devions repenser notre ENT pour le rendre plus fonctionnel et plus agréable à utiliser. J'ai principalement travaillé sur le développement du site, en particulier la partie back-end de l'ENT, en suivant les maquettes réalisées par les membres de mon groupe. J'ai utilisé PHP et MySQL pour gérer la base de données et j'ai intégré un bon nombre de fonctionnalités, côté étudiant comme côté back-office, telles qu'un système de messagerie, de gestion des notes et des absences, un emploi du temps fonctionnel en temps réel, une zone de dépôt pour les rendus, etc. <br><br><strong>Identifiant étudiant</strong> : clara.moubarak  <br><strong>Mot de passe</strong> : clara <br><br> <strong>Identifiant admin</strong> : isabelle.rouas  <br><strong>Mot de passe</strong> : isabelle",
+            "details": [
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : Janvier 2025"
+            ],
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
+            "context": "Projet universitaire",
+            "group": "En groupe",
+            "type": "Développement front et back-end",
+            "image": "images/ent.png"
         },
         {
             "id": 3,
@@ -42,21 +57,6 @@
             "group": "Seule",
             "type": "Développement back-end",
             "image": "images/hh.png"
-        },
-        {
-            "id": 4,
-            "title": "Montage vidéo",
-            "description": "Dans le cadre d’un projet universitaire, nous avons organisé et tourné une interview avec le photographe Ludovic Baron dans une salle privée de la Samaritaine, que nous avions préalablement sollicitée. Une fois le tournage terminé, chacun devait monter l’interview individuellement, en y intégrant un sous-titrage en anglais. Ce projet a marqué ma première expérience professionnelle dans des conditions réelles du monde du travail.",
-            "details": [
-                "<strong>Logiciel</strong> : Premiere Pro <br> <br>",
-                "<strong>Durée</strong> : 6 minutes <br> <br>",
-                "<strong>Date</strong> : Décembre 2023 <br> <br>"
-            ],
-            "link": "https://www.youtube.com/watch?v=0ndssbiE-y4",
-            "context": "Projet universitaire",
-            "group": "Seule",
-            "type": "Audiovisuel",
-            "image": "images/baron.png"
         },
         {
             "id": 5,
@@ -75,18 +75,18 @@
     ],
     "en": [
         {
-            "id": 1,
-            "title": "ENT",
-            "description": "For this project, we had to rethink our ENT to make it more functional and enjoyable to use. I mainly worked on the development of the site, especially the back-end part of the ENT, following the mockups made by the members of my group. I used PHP and MySQL to manage the database and integrated a good number of features, student side as well as back-office side, such as a messaging system, grade and absence management, a functional real-time timetable, a deposit area for submissions, etc. <br><br><strong>Student ID</strong> : clara.moubarak  <br><strong>Password</strong> : clara <br><br> <strong>Admin ID</strong> : isabelle.rouas  <br><strong>Password</strong> : isabelle",
+            "id": 4,
+            "title": "TIM website",
+            "description": "As part of my university exchange in Canada, I created a showcase website for the TIM (Techniques Intégration Multimédia), the program I was in at Cégep de Sainte-Foy. This site presents the program, courses, student projects and career opportunities. I used the MVC model, as well as JavaScript, PHP, SQL, SASS, and Blade for the development of the site, based on the mockups that I had to create myself. My site came in 2nd in the class, despite my delay on certain skills compared to other students.",
             "details": [
-                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
-                "<strong>Date</strong> : January 2024"
-            ],
-            "link": "https://ent.moubarak.butmmi.o2switch.site",
+                "<strong>Technologies</strong> : PHP, MySQL, Javascript, HTML, SCSS, Blade <br> <br>",
+                "<strong>Date</strong> : February 2025 <br> <br>"
+            ],  
+            "link": "",
             "context": "Academic project",
-            "group": "In group",
-            "type": "Front and back-end development",
-            "image": "images/ent.png"
+            "group": "Alone",
+            "type": "Web Design and Development",
+            "image": "images/TIM.png"
         },
         {
             "id": 2,
@@ -104,6 +104,20 @@
             "image": "images/moviz.png"
         },
         {
+            "id": 1,
+            "title": "ENT",
+            "description": "For this project, we had to rethink our ENT to make it more functional and enjoyable to use. I mainly worked on the development of the site, especially the back-end part of the ENT, following the mockups made by the members of my group. I used PHP and MySQL to manage the database and integrated a good number of features, student side as well as back-office side, such as a messaging system, grade and absence management, a functional real-time timetable, a deposit area for submissions, etc. <br><br><strong>Student ID</strong> : clara.moubarak  <br><strong>Password</strong> : clara <br><br> <strong>Admin ID</strong> : isabelle.rouas  <br><strong>Password</strong> : isabelle",
+            "details": [
+                "<strong>Languages</strong> : PHP, MySQL, Javascript <br> <br>",
+                "<strong>Date</strong> : January 2024"
+            ],
+            "link": "https://ent.moubarak.butmmi.o2switch.site",
+            "context": "Academic project",
+            "group": "In group",
+            "type": "Front and back-end development",
+            "image": "images/ent.png"
+        },
+        {
             "id": 3,
             "title": "Hommade Hommous",
             "description": "Hommade Hommous is a reservation website created in my first year of studies for fictional Lebanese cooking workshops, promoting meetings between participants. In addition to HTML, CSS and JavaScript, I used PHP and MySQL to manage the database. The site integrates a filter and a search bar in PHP, a sort in JavaScript, and sends a confirmation email for each reservation.",
@@ -116,21 +130,6 @@
             "group": "Alone",
             "type": "Back-end development",
             "image": "images/hh.png"
-        },
-        {
-            "id": 4,
-            "title": "Video editing",
-            "description": "As part of an academic project, we organized and filmed an interview with photographer Ludovic Baron in a private room at Samaritaine, which we had previously contacted. Once the shooting was over, everyone had to edit the interview individually, integrating English subtitles. This project marked my first professional experience in real working conditions.",
-            "details": [
-                "<strong>Software</strong> : Premiere Pro <br> <br>",
-                "<strong>Duration</strong> : 6 minutes <br> <br>",
-                "<strong>Date</strong> : December 2023 <br> <br>"
-            ],  
-            "link": "https://www.youtube.com/watch?v=0ndssbiE-y4",
-            "context": "Academic project",
-            "group": "Alone",
-            "type": "Audiovisual",
-            "image": "images/baron.png"
         },
         {
             "id": 5,
