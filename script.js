@@ -274,7 +274,14 @@ function showProjectModal(index) {
   }
   modalDescription.innerHTML = project.description;
   modalDetails.innerHTML = project.details.map(detail => `<li>${detail}</li>`).join('');
-  modalLink.href = project.link;
+  const projectLink = (project.link || '').trim();
+  if (projectLink) {
+    modalLink.href = projectLink;
+    modalLink.style.display = '';
+  } else {
+    modalLink.removeAttribute('href');
+    modalLink.style.display = 'none';
+  }
 
   // Afficher la modale
   modal.style.display = 'block';
