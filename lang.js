@@ -2,7 +2,7 @@
 const translations = {
 fr: {
     about: "à propos",
-    intro: "Salut ! Je m'appelle Clara, je suis étudiante en développement web basée à Paris. Ce que j'aime, c'est mettre ma touche personnelle pour créer des sites web beaux et fonctionnels en front-end comme en back. Je suis toujours à la recherche d'opportunités pour apprendre et développer mes compétences. Je suis actuellement à la recherche d'une alternance en Déveoppemet Web à partir de septembre 2025. N'hésitez pas à me contacter si vous souhaitez collaborer!",
+    intro: "Salut ! Je m'appelle Clara, je suis étudiante en développement web basée à Paris. Ce que j'aime, c'est mettre ma touche personnelle pour créer des sites web beaux et fonctionnels en front-end comme en back. Je suis toujours à la recherche d'opportunités pour apprendre et développer mes compétences.",
     cv: "Mon CV",
     analogie: "Pourquoi les développeurs détestent-ils la nature ?",
     responsive: "Parce qu’il y a trop de branches.",
@@ -26,7 +26,7 @@ fr: {
 },
 en: {
     about: "About Me",
-    intro: "Hi! I'm Clara, a web developer student based in Paris. I'm passionate about creating beautiful and functional websites, whether it is in front-end or back-end. I'm always looking for new opportunities to learn and develop my skills. I'm currently looking for an internship in Web Development, starting from September 2025. Feel free to contact me if you'd like to work together!",
+    intro: "Hi! I'm Clara, a web developer student based in Paris. I'm passionate about creating beautiful and functional websites, whether it is in front-end or back-end. I'm always looking for new opportunities to learn and develop my skills.",
     cv: "My CV",
     analogie: "Why was the developer broke?",
     responsive: "Because he used up all his cache.",
